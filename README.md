@@ -1,4 +1,4 @@
-# discord-functions
+# Discord Functions
 ✨A database of discord functions and how to find them using a string, useful for dataminers.✨
 
 ## Why i made this?
