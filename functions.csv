@@ -1,1 +1,3 @@
 function_name, find_with, method 
+startConsoleQuestHeartbeat, .QUEST_ON_CONSOLE_START(, findFunctionByCode 
+stopConsoleQuestHeartbeat, .QUEST_ON_CONSOLE_STOP(, findFunctionByCode
