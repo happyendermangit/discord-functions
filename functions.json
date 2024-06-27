@@ -2,5 +2,6 @@
  [
    {"name": "startConsoleQuestHeartbeat", "find_with":".QUEST_ON_CONSOLE_START(", "method":"findFunctionByCode"}, 
    {"name":"stopConsoleQuestHeartbeat", "find_with": ".QUEST_ON_CONSOLE_STOP(", "method":"findFunctionByCode" } 
+   {"name":"fetchCurrentQuests", "find_with": "type:\"QUESTS_FETCH_CURRENT_QUESTS_SUCCESS\"", "method": "findFunctionByCode"}
  ]
 ]
