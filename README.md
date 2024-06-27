@@ -34,4 +34,4 @@ type FunctionsNames = Chunk[]
 ```
 
 If you cant read these typescripts types, here is the structure of the data:
-- The chld elements of the array are the chunks, these chunks contain the their functions with their name, find_with and method
+- The child elements of the array are the chunks, these chunks contain the their functions with their name, find_with and method
