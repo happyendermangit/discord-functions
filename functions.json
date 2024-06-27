@@ -1,7 +1,14 @@
 [
  [
-   {"name": "startConsoleQuestHeartbeat", "find_with":".QUEST_ON_CONSOLE_START(", "method":"findFunctionByCode"}, 
-   {"name":"stopConsoleQuestHeartbeat", "find_with": ".QUEST_ON_CONSOLE_STOP(", "method":"findFunctionByCode" } 
-   {"name":"fetchCurrentQuests", "find_with": "type:\"QUESTS_FETCH_CURRENT_QUESTS_SUCCESS\"", "method": "findFunctionByCode"}
- ]
+   {"name": "startConsoleHeartbeat", "find_with":".QUEST_ON_CONSOLE_START(", "method":"findFunctionByCode"}, 
+   {"name":"stopConsoleHeartbeat", "find_with": ".QUEST_ON_CONSOLE_STOP(", "method":"findFunctionByCode" },
+   {"name":"fetchCurrentQuests", "find_with": "type:\"QUESTS_FETCH_CURRENT_QUESTS_SUCCESS\"", "method": "findFunctionByCode"},
+   {"name":"sendHeartbeat", "find_with": "type:\"QUESTS_SEND_HEARTBEAT_SUCCESS\",", "method": "findFunctionByCode"},
+   {"name":"enrollInQuest", "find_with": "type:\"QUESTS_ENROLL_SUCCESS\",", "method": "findFunctionByCode"},
+   {"name":"claimRewardCode", "find_with": "type:\"QUESTS_CLAIM_REWARD_CODE_SUCCESS\",", "method": "findFunctionByCode"},
+   {"name":"claimReward", "find_with": ".QUESTS_CLAIM_REWARD(", "method": "findFunctionByCode"},
+   {"name":"fetchRewardCode", "find_with": "type:\"QUESTS_FETCH_REWARD_CODE_SUCCESS\",", "method": "findFunctionByCode"},
+   {"name":"dismissContent", "find_with": ".QUESTS_DISMISS_CONTENT(", "method": "findFunctionByCode"},
+   {"name":"dismissProgressTrackingFailure", "find_with": "type:\"QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE\",", "method": "findFunctionByCode"},
+  ]
 ]
