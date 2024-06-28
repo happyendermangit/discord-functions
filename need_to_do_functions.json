@@ -65,52 +65,6 @@
     ],
     [
         {
-            "name": "addNewMemberAction",
-            "code": "function S(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION\",action:e})}"
-        },
-        {
-            "name": "addResourceChannel",
-            "code": "function h(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL\",resourceChannel:e})}"
-        },
-        {
-            "name": "deleteNewMemberAction",
-            "code": "function m(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION\",channelId:e})}"
-        },
-        {
-            "name": "deleteResourceChannel",
-            "code": "function R(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL\",resourceChannelId:e})}"
-        },
-        {
-            "name": "dismissSuggestedChannels",
-            "code": "function M(e,t){null!=e&&i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION\",guildId:e,channelIds:t})}"
-        },
-        {
-            "name": "reorderNewMemberActions",
-            "code": "function N(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION\",actions:e})}"
-        },
-        {
-            "name": "reorderResourceChannels",
-            "code": "function x(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL\",resourceChannels:e})}"
-        },
-        {
-            "name": "resetHomeSettings",
-            "code": "function D(){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET\"})}"
-        },
-        {
-            "name": "updateNewMemberAction",
-            "code": "function f(e,t){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION\",channelId:e,action:t})}"
-        },
-        {
-            "name": "updateResourceChannel",
-            "code": "function C(e,t){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL\",channelId:e,resourceChannel:t})}"
-        },
-        {
-            "name": "updateWelcomeMessage",
-            "code": "function T(e){i.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE\",welcomeMessage:e})}"
-        }
-    ],
-    [
-        {
             "name": "GridSquareIcon",
             "code": "e=>{let{width:t=24,height:n=24,color:i=l.default.colors.INTERACTIVE_NORMAL,colorClass:r=\"\",...o}=e;return(0,a.jsx)(\"svg\",{...(0,s.default)(o),xmlns:\"http://www.w3.org/2000/svg\",width:t,height:n,fill:\"none\",viewBox:\"0 0 24 24\",children:(0,a.jsx)(\"path\",{fill:\"string\"==typeof i?i:i.css,d:\"M15 11a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5ZM2 20c0 1.1.9 2 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v5ZM13 20c0 1.1.9 2 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-5a2 2 0 0 0-2 2v5ZM2 9c0 1.1.9 2 2 2h5a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v5Z\",className:r})})}"
         }
@@ -213,12 +167,6 @@
         {
             "name": "default",
             "code": "function(e,t,a){var n,r=i[e];if(n=\"string\"==typeof r?r:1===t?r.one:r.other.replace(\"{{count}}\",String(t)),null!=a&&a.addSuffix)return a.comparison&&a.comparison>0?\"σε \"+n:n+\" πριν\";return n}"
-        }
-    ],
-    [
-        {
-            "name": "fetchPriceTiers",
-            "code": "async function l(e,t){r.default.dispatch({type:\"CREATOR_MONETIZATION_PRICE_TIERS_FETCH\",guildId:e,priceTierType:t});try{let n=await i.getPriceTiers(e,t);r.default.dispatch({type:\"CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS\",guildId:e,priceTierType:t,priceTiers:n})}catch(n){r.default.dispatch({type:\"CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE\",guildId:e,priceTierType:t})}}"
         }
     ],
     [
@@ -327,12 +275,6 @@
     ],
     [
         {
-            "name": "default",
-            "code": "function S(){var e;let t=(0,s.useStateFromStores)([g.default],()=>g.default.getFeed(y.ContentInventoryFeedKey.GLOBAL_FEED)),r=(0,s.useStateFromStores)([g.default],()=>g.default.getDebugImpressionCappingDisabled()),i=(0,s.useStateFromStores)([p.default],()=>p.default.getDebugFastImpressionCappingEnabled()),l=function(e){let t=o().groupBy(e,e=>e.content_type);return Object.keys(t).map(e=>{let r=t[e];return{key:\"\".concat(e),type:r[0].content_type,entries:r}})}(null==t?void 0:null===(e=t.entries)||void 0===e?void 0:e.map(e=>e.content)),c=(0,s.useStateFromStores)([g.default],()=>{var e;return(null===(e=g.default.getFeedState(y.ContentInventoryFeedKey.GLOBAL_FEED))||void 0===e?void 0:e.loading)===!0});return(0,a.jsx)(\"div\",{className:n()(x.panel),children:(0,a.jsxs)(d.ScrollerThin,{className:b.content,children:[(0,a.jsxs)(d.FormSection,{children:[(0,a.jsx)(d.FormTitle,{children:\"Inventory\"}),l.length>0&&(0,a.jsx)(h.default,{columns:k,data:l}),(0,a.jsx)(d.Spacer,{size:8}),(0,a.jsx)(f.default,{}),(0,a.jsx)(d.Button,{fullWidth:!0,onClick:function(){u.default.dispatch({type:\"CONTENT_INVENTORY_MANUAL_REFRESH\"})},submitting:c,children:\"Refresh Now\"})]}),(0,a.jsxs)(d.FormSection,{children:[(0,a.jsx)(d.FormTitle,{children:\"Impression Capping\"}),(0,a.jsx)(d.Button,{fullWidth:!0,onClick:function(){u.default.dispatch({type:\"CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS\"})},children:\"Clear Impressions\"}),(0,a.jsx)(d.Spacer,{size:8}),(0,a.jsx)(d.Button,{fullWidth:!0,onClick:function(){u.default.dispatch({type:\"CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS\"})},children:\"Log Impressions\"}),(0,a.jsx)(d.Spacer,{size:8}),(0,a.jsx)(d.Button,{fullWidth:!0,onClick:function(){u.default.dispatch({type:\"CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING\"})},children:r?\"Enable Impression Capping\":\"Disable Impression Capping\"}),(0,a.jsx)(d.Spacer,{size:8}),(0,a.jsx)(d.Button,{fullWidth:!0,onClick:function(){u.default.dispatch({type:\"CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING\"})},children:i?\"Disable Fast Impression Capping\":\"Enable Fast Impression Capping\"})]}),false,(0,a.jsx)(m.default,{})]})})}"
-        }
-    ],
-    [
-        {
             "name": "fetchPremiumMarketingContentWithUserOffer",
             "code": "async function i(e){let{userTrialOffer:t,userDiscount:n,userDiscountOffer:i}=e;try{let e=await a.HTTP.post({url:l.Endpoints.PREMIUM_MARKETING,body:{user_trial_offer:t,user_discount:n,user_discount_offer:i}});if(e.ok)return e.body;return s.default.captureMessage(\"fetchPremiumMarketingContentWithUserOffer failed\"),[]}catch(e){return s.default.captureException(e),[]}}"
         }
@@ -414,10 +356,6 @@
         }
     ],
     [
-        {
-            "name": "clearMentionRaidDetected",
-            "code": "function S(e){_.default.dispatch({type:\"AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS\",guildId:e})}"
-        },
         {
             "name": "createAutomodRule",
             "code": "async function M(e){let t=O(e);return delete t.id,I((await o.HTTP.post({url:T.Endpoints.GUILD_AUTOMOD_RULES(e.guildId),body:t})).body)}"
@@ -541,20 +479,6 @@
     ],
     [
         {
-            "name": "clearAuthSessions",
-            "code": "function r(){n.default.dispatch({type:\"FETCH_AUTH_SESSIONS_SUCCESS\",sessions:[]})}"
-        },
-        {
-            "name": "fetchAuthSessions",
-            "code": "async function l(){var e;let t=await a.HTTP.get({url:i.Endpoints.AUTH_SESSIONS});return(null==t?void 0:t.ok)&&(null===(e=t.body)||void 0===e?void 0:e.user_sessions)!=null&&n.default.dispatch({type:\"FETCH_AUTH_SESSIONS_SUCCESS\",sessions:t.body.user_sessions}),t}"
-        },
-        {
-            "name": "logOutSessions",
-            "code": "async function o(e){if(Array.isArray(e)){if(0===e.length)return}else e=[e];let t=await a.HTTP.post({url:i.Endpoints.AUTH_SESSIONS_LOGOUT,body:{session_id_hashes:e}});return(null==t?void 0:t.ok)&&n.default.dispatch({type:\"LOGOUT_AUTH_SESSIONS_SUCCESS\",sessionIdHashes:e}),t}"
-        }
-    ],
-    [
-        {
             "name": "ContentImage",
             "code": "function d(e){let{src:t,size:a,className:l,alt:d=\"icon\",fallbackSrc:c}=e,g=(0,o.default)(),[f,E]=r.useState(!1),[m,T]=r.useState(!1),_=null==c||m;return null==t||f&&_?(0,n.jsx)(s.default,{width:a,height:a,color:\"dark\"===g?\"white\":\"black\",className:i()(u.contentImage,l)}):(0,n.jsx)(\"img\",{style:{maxWidth:\"\".concat(a,\"px\"),height:\"\".concat(a,\"px\")},className:i()(u.contentImage,l),src:f&&null!=c?c:t,alt:d,onError:e=>f?T(!0):E(!0)})}"
         }
@@ -631,22 +555,6 @@
         {
             "name": "hide",
             "code": "function N(){L(h.AnalyticEvents.QUICKSWITCHER_CLOSED),g()}"
-        },
-        {
-            "name": "search",
-            "code": "function U(e){n.default.dispatch({type:\"QUICKSWITCHER_SEARCH\",...O(e)})}"
-        },
-        {
-            "name": "selectResult",
-            "code": "function b(e){n.default.dispatch({type:\"QUICKSWITCHER_SELECT\",selectedIndex:e})}"
-        },
-        {
-            "name": "show",
-            "code": "function H(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:\"KEYBIND\",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"\";!function(e){let t;if(f.default.isOpen())return;let l=R.default.getGuildId(),n=E.default.getChannelId(l);if(null!=n){let e=p.default.getChannel(n);t=null!=e?e.type:null}A.default.track(h.AnalyticEvents.QUICKSWITCHER_OPENED,{source:e,current_guild_id:l,current_channel_id:n,current_channel_type:t})}(e),n.default.dispatch({type:\"QUICKSWITCHER_SHOW\",...O(t)})}"
-        },
-        {
-            "name": "switchToResult",
-            "code": "function K(e){let t,l=arguments.length>1&&void 0!==arguments[1]&&arguments[1];g(),L(h.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED,e);let{type:_,record:E}=e,R={page:h.AnalyticsPages.QUICK_SWITCHER};switch(_){case i.AutocompleterResultTypes.GUILD:(0,d.transitionToGuild)(E.id,{navigationReplace:!0});break;case i.AutocompleterResultTypes.TEXT_CHANNEL:null!=(t=p.default.getChannel(E.id))&&(0,r.transitionToChannel)(t.id,{state:{analyticsSource:R},navigationReplace:!0});break;case i.AutocompleterResultTypes.VOICE_CHANNEL:null!=(t=p.default.getChannel(E.id))&&(l?u.default.updateChatOpen(E.id,!0):o.default.selectVoiceChannel(E.id),(0,r.transitionToChannel)(t.id,{state:{analyticsSource:R},navigationReplace:!0}));break;case i.AutocompleterResultTypes.USER:s.default.openPrivateChannel([E.id],!1,!1,\"Quickswitcher\"),a.default.channelListScrollTo(h.ME,p.default.getDMFromUserId(E.id));break;case i.AutocompleterResultTypes.GROUP_DM:(0,r.transitionToChannel)(E.id,{navigationReplace:!0}),a.default.channelListScrollTo(h.ME,E.id);break;case i.AutocompleterResultTypes.APPLICATION:let A=T.default.getActiveLibraryApplication(E.id);y(E.id,A,{analyticsParams:{source:h.AnalyticsLocations.QUICK_SWITCHER,location:h.AnalyticsLocations.QUICK_SWITCHER}});break;case i.AutocompleterResultTypes.LINK:(0,c.default)(E.path,{navigationReplace:!0})}n.default.dispatch({type:\"QUICKSWITCHER_SWITCH_TO\",result:e})}"
         }
     ],
     [
@@ -717,20 +625,12 @@
             "code": "async function o(e){await n.HTTP.post({url:s.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)})}"
         },
         {
-            "name": "fetchCreatorMonetizationNagActivateEligibility",
-            "code": "async function m(e){try{let t=await n.HTTP.get({url:s.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,query:{nag_guild_ids:e}});r.default.dispatch({type:\"CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS\",eligibleGuilds:t.body.eligible_guilds})}catch(e){}}"
-        },
-        {
             "name": "getCreatorMonetizationEligibility",
             "code": "async function d(e){return(await n.HTTP.get({url:s.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)})).body}"
         },
         {
             "name": "getCreatorMonetizationOnboardingMarketing",
             "code": "async function f(e){return(await n.HTTP.get({url:s.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)})).body}"
-        },
-        {
-            "name": "ownershipTransferOnboard",
-            "code": "async function E(e,t){let a=(await n.HTTP.post({url:s.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),body:{team_id:t}})).body;return null!=a.application&&r.default.dispatch({type:\"APPLICATION_FETCH_SUCCESS\",application:a.application}),a}"
         },
         {
             "name": "removeMonetization",
@@ -775,12 +675,6 @@
     ],
     [
         {
-            "name": "unlockAchievement",
-            "code": "function u(e){l.default.dispatch({type:\"POGGERMODE_ACHIEVEMENT_UNLOCK\",achievementId:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function o(e){let{collection:t}=e,[i,o]=n.useState(!1),c=(0,s.useApplicationDirectoryHistory)(e=>e.guildId),d=(0,a.useIsVisible)(e=>{e&&o(!0)});return n.useEffect(()=>{i&&l.default.track(r.AnalyticEvents.APP_DIRECTORY_COLLECTION_VIEWED,{collection_id:t.id,guild_id:c})},[i,t,c]),d}"
         }
@@ -819,12 +713,6 @@
         {
             "name": "BrowserCheckeredIcon",
             "code": "e=>{let{width:t=24,height:n=24,color:s=a.default.colors.INTERACTIVE_NORMAL,colorClass:o=\"\",...r}=e;return(0,i.jsxs)(\"svg\",{...(0,l.default)(r),xmlns:\"http://www.w3.org/2000/svg\",width:t,height:n,fill:\"none\",viewBox:\"0 0 24 24\",children:[(0,i.jsx)(\"path\",{fill:\"string\"==typeof s?s:s.css,fillRule:\"evenodd\",d:\"M4 3a3 3 0 0 0-3 3v2a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V6a3 3 0 0 0-3-3H4Zm1 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm4-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z\",clipRule:\"evenodd\",className:o}),(0,i.jsx)(\"path\",{fill:\"string\"==typeof s?s:s.css,d:\"M9 15h2v2H9v-2ZM13 15v2h2v-2h-2Z\",className:o}),(0,i.jsx)(\"path\",{fill:\"string\"==typeof s?s:s.css,fillRule:\"evenodd\",d:\"M2 11a1 1 0 0 0-1 1v6a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1H2Zm5 4v-2H5v2h2Zm2 0H7v2H5v2h2v-2h2v2h2v-2h2v2h2v-2h2v2h2v-2h-2v-2h2v-2h-2v2h-2v-2h-2v2h-2v-2H9v2Z\",clipRule:\"evenodd\",className:o})]})}"
-        }
-    ],
-    [
-        {
-            "name": "fetchDiscoveryChecklist",
-            "code": "async function i(e){l.default.dispatch({type:\"DISCOVER_CHECKLIST_FETCH_START\",guildId:e});try{let t=await a.HTTP.get({url:n.Endpoints.GUILD_DISCOVERY_REQUIREMENTS(e),oldFormErrors:!0});l.default.dispatch({type:\"DISCOVER_CHECKLIST_FETCH_SUCCESS\",guildId:e,checklist:t.body})}catch(t){l.default.dispatch({type:\"DISCOVER_CHECKLIST_FETCH_FAILURE\",guildId:e})}}"
         }
     ],
     [
@@ -1171,12 +1059,6 @@
     ],
     [
         {
-            "name": "setSafetyPage",
-            "code": "function l(e){a.default.dispatch({type:\"GUILD_SETTINGS_SAFETY_PAGE\",page:e})}"
-        }
-    ],
-    [
-        {
             "name": "pageToEducationUpsellType",
             "code": "function o(e){switch(e){case 1:return\"Safety Check\";case 2:return\"Default Channels\";case 4:return\"Customization Questions\";case 6:return\"Home Settings\";default:return null}}"
         }
@@ -1305,12 +1187,6 @@
     ],
     [
         {
-            "name": "fetchUserAffinities",
-            "code": "function u(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return n.default.needsRefresh()?(_.default.dispatch({type:\"LOAD_USER_AFFINITIES\"}),a.HTTP.get({url:l.Endpoints.USER_AFFINITIES,retries:e?3:0,oldFormErrors:!0}).then(e=>{let{body:t}=e;_.default.dispatch({type:\"LOAD_USER_AFFINITIES_SUCCESS\",affinities:t})},()=>{_.default.dispatch({type:\"LOAD_USER_AFFINITIES_FAILURE\"})})):Promise.resolve()}"
-        }
-    ],
-    [
-        {
             "name": "getNodeText",
             "code": "function e(t){return\"string\"==typeof t||\"number\"==typeof t?t:t instanceof Array?t.map(e).join(\"\"):l.isValidElement(t)?e(t.props.children):void 0}"
         }
@@ -1337,12 +1213,6 @@
         {
             "name": "default",
             "code": "function c(){let e=o.AnimateEmoji.useSetting(),t=(0,l.useStateFromStores)([i.default],()=>i.default.useReducedMotion);a.useEffect(()=>{function n(n){let{messageId:a,channelId:l,emoji:s,optimistic:i,reactionType:o}=n;!i&&o===d.ReactionTypes.BURST&&e&&!t&&(0,r.playBurstReaction)({channelId:l,messageId:a,emoji:s,key:u.BurstReactionEffectSource.EXTERNAL})}return s.default.subscribe(\"MESSAGE_REACTION_ADD\",n),()=>{s.default.unsubscribe(\"MESSAGE_REACTION_ADD\",n)}},[e,t])}"
-        }
-    ],
-    [
-        {
-            "name": "toggle",
-            "code": "function n(e,t){let r=\"boolean\"==typeof t?t:!i.default.get(e);a.default.dispatch({type:\"DEV_TOOLS_DEV_SETTING_SET\",toggle:e,value:r})}"
         }
     ],
     [
@@ -1383,20 +1253,6 @@
         {
             "name": "default",
             "code": "function x(e){let{results:t,guildId:a}=e;return(0,l.jsxs)(\"div\",{className:C.container,children:[(0,l.jsx)(o.default,{}),(0,l.jsx)(\"div\",{className:C.list,children:t.map((e,t)=>{let n=\"\".concat(t).concat(e.type);if(e.type===i.ApplicationDirectorySearchResultType.APPLICATION)return(0,l.jsx)(I,{result:e},n);if(e.type===i.ApplicationDirectorySearchResultType.ACTIVITY_APPLICATION)return(0,l.jsx)(R,{result:e},n);if(e.type===i.ApplicationDirectorySearchResultType.CONNECTION)return(0,l.jsx)(T,{guildId:a,result:e},n)})}),(0,l.jsx)(g.default,{guildId:a})]})}"
-        }
-    ],
-    [
-        {
-            "name": "getSafetyHubData",
-            "code": "async function r(){a.default.dispatch({type:\"SAFETY_HUB_FETCH_START\"});let t=l.default.getSuspendedUserToken(),e=null!=t?o.Endpoints.SAFETY_HUB_SUSPENDED:o.Endpoints.SAFETY_HUB,n=null!=t?i.HTTP.post({url:e,body:{token:t}}):i.HTTP.get({url:e});await n.then(t=>{let{body:e}=t,{classifications:n,guild_classifications:i,account_standing:u,is_dsa_eligible:l}=e,s=n.map(t=>(d(t),t));a.default.dispatch({type:\"SAFETY_HUB_FETCH_SUCCESS\",classifications:s.concat(null!=i?i:[]),accountStanding:u,isDsaEligible:l})}).catch(t=>{var e,n;a.default.dispatch({type:\"SAFETY_HUB_FETCH_FAILURE\",error:null!==(n=null==t?void 0:null===(e=t.body)||void 0===e?void 0:e.message)&&void 0!==n?n:\"Unknown error\"})})}"
-        },
-        {
-            "name": "getSafetyHubDataForClassification",
-            "code": "async function c(t){a.default.dispatch({type:\"SAFETY_HUB_FETCH_CLASSIFICATION_START\",classificationId:t});let e=l.default.getSuspendedUserToken(),n=null!=e?o.Endpoints.SAFETY_HUB_SUSPENDED:o.Endpoints.SAFETY_HUB,u=null!=e?i.HTTP.post({url:n,body:{token:e}}):i.HTTP.get({url:n});await u.then(e=>{let{body:n}=e,{classifications:i,account_standing:u,is_dsa_eligible:l}=n,s=i.find(e=>e.id===t);null!=s?(d(s),a.default.dispatch({type:\"SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS\",classification:s,accountStanding:u,isDsaEligible:l})):a.default.dispatch({type:\"SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE\",error:\"Classification not found.\",classificationId:t})}).catch(e=>{var n,i;a.default.dispatch({type:\"SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE\",error:null!==(i=null==e?void 0:null===(n=e.body)||void 0===n?void 0:n.message)&&void 0!==i?i:\"Unknown error\",classificationId:t})})}"
-        },
-        {
-            "name": "requestReview",
-            "code": "async function f(t,e,n){let u=l.default.getSuspendedUserToken(),s=null!=u?o.Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t):o.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),r=null!=u?i.HTTP.put({url:s,body:{signal:e,user_input:n,token:u}}):i.HTTP.put({url:s,body:{signal:e,user_input:n}});a.default.dispatch({type:\"SAFETY_HUB_REQUEST_REVIEW_START\"}),await r.then(()=>{a.default.dispatch({type:\"SAFETY_HUB_REQUEST_REVIEW_SUCCESS\",classificationId:t})}).catch(t=>{var e,n;throw a.default.dispatch({type:\"SAFETY_HUB_REQUEST_REVIEW_FAILURE\",error:null!==(n=null==t?void 0:null===(e=t.body)||void 0===e?void 0:e.message)&&void 0!==n?n:\"Unknown error\"}),t})}"
         }
     ],
     [
@@ -1525,12 +1381,6 @@
     ],
     [
         {
-            "name": "dismiss",
-            "code": "function a(e){s.default.dispatch({type:\"DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS\",skuId:e})}"
-        }
-    ],
-    [
-        {
             "name": "addFavoriteCategory",
             "code": "function f(e){let t=o.default.fromTimestamp(Date.now());a.PreloadedUserSettingsActionCreators.updateAsync(\"favorites\",n=>{n.favoriteChannels[t]=r.FavoriteChannel.create({nickname:e,type:r.FavoriteChannelType.CATEGORY,position:l(),parentId:\"0\"})},a.UserSettingsDelay.FREQUENT_USER_ACTION)}"
         },
@@ -1589,12 +1439,6 @@
     ],
     [
         {
-            "name": "setCertifiedDevices",
-            "code": "function s(e,t){a.default.dispatch({type:\"CERTIFIED_DEVICES_SET\",applicationId:e,devices:t})}"
-        }
-    ],
-    [
-        {
             "name": "useCustomNotificationSoundDMContextMenuItem",
             "code": "function x(e,t,n){return R(e,t,s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE,n)}"
         },
@@ -1645,40 +1489,12 @@
             "code": "function u(e,t,n,a){return l.HTTP.post({url:r.Endpoints.SHARED_CANVAS_LINES(e,n),body:{line_id:t,points:a}})}"
         },
         {
-            "name": "clearDrawables",
-            "code": "function p(e,t){s.default.dispatch({type:\"SHARED_CANVAS_CLEAR_DRAWABLES\",drawables:e,streamerId:t})}"
-        },
-        {
-            "name": "drawLinePoint",
-            "code": "function o(e,t,n,a,l){s.default.dispatch({type:\"SHARED_CANVAS_DRAW_LINE_POINT\",channelId:e,userId:n,lineId:t,streamerId:a,point:l})}"
-        },
-        {
-            "name": "setDrawMode",
-            "code": "function E(e){s.default.dispatch({type:\"SHARED_CANVAS_SET_DRAW_MODE\",drawMode:e})}"
-        },
-        {
             "name": "startEmojiHose",
             "code": "function c(e,t,n){return l.HTTP.post({url:r.Endpoints.SHARED_CANVAS_EMOJI_HOSES(e,t),body:{emoji_hose:n}})}"
         },
         {
             "name": "stopEmojiHose",
             "code": "function f(e,t,n){l.HTTP.del({url:r.Endpoints.SHARED_CANVAS_EMOJI_HOSE(e,t,n),backoff:new a.default})}"
-        },
-        {
-            "name": "stopRenderedEmojiHose",
-            "code": "function h(e,t){t.state=i.EmojiHoseState.STOP,s.default.dispatch({type:\"SHARED_CANVAS_UPDATE_EMOJI_HOSE\",emojiHose:t,userId:t.userId,streamerId:e})}"
-        },
-        {
-            "name": "toggleOverlayCanvas",
-            "code": "function C(){s.default.dispatch({type:\"TOGGLE_OVERLAY_CANVAS\"})}"
-        },
-        {
-            "name": "updateEmojiHose",
-            "code": "function m(e,t,n){s.default.dispatch({type:\"SHARED_CANVAS_UPDATE_EMOJI_HOSE\",emojiHose:e,userId:t,streamerId:n})}"
-        },
-        {
-            "name": "updateLinePoints",
-            "code": "function d(e,t,n,a){s.default.dispatch({type:\"SHARED_CANVAS_UPDATE_LINE_POINTS\",userId:t,lineId:e,newPoints:a,streamerId:n})}"
         }
     ],
     [
@@ -1921,24 +1737,6 @@
     ],
     [
         {
-            "name": "fetchEngagementOverview",
-            "code": "function o(e){return r(e,n.Endpoints.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(t=>{let{body:s}=t;l.default.dispatch({type:\"GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS\",guildId:e,stats:s.slice(0,2)})},e=>{l.default.dispatch({type:\"GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE\",error:e.body})})}"
-        },
-        {
-            "name": "fetchGrowthActivationOverview",
-            "code": "function d(e){return r(e,n.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(t=>{let{body:s}=t;l.default.dispatch({type:\"GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS\",guildId:e,stats:s.slice(0,2)})},e=>{l.default.dispatch({type:\"GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE\",error:e.body})})}"
-        },
-        {
-            "name": "fetchGrowthActivationRetention",
-            "code": "function u(e){return r(e,n.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(t=>{let{body:s}=t,a=s.filter(e=>e.hasOwnProperty(\"pct_retained\")).map(e=>{let{interval_start_timestamp:t,pct_retained:s,...a}=e;return{interval_start_timestamp:t,pct_retained:s}});l.default.dispatch({type:\"GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS\",guildId:e,stats:a.slice(0,2)})},e=>{l.default.dispatch({type:\"GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE\",error:e.body})})}"
-        },
-        {
-            "name": "fetchMemberInsights",
-            "code": "function c(e){return a.HTTP.get({url:n.Endpoints.GUILD_ANALYTICS_MEMBER_INSIGHTS(e)}).then(t=>{l.default.dispatch({type:\"GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS\",guildId:e,hasAccessRate:t.body.has_access_rate,accessRate:t.body.access_rate})},()=>{})}"
-        }
-    ],
-    [
-        {
             "name": "useRoleSubscriptionInsightsAccess",
             "code": "function o(e){return(0,l.useStateFromStores)([n.default,i.default],()=>{let t=n.default.getGuild(e);if(null==t)return!1;let s=i.default.getGuildPermissions(t);return null!=s&&a.has(s,r.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS)})}"
         }
@@ -2037,12 +1835,6 @@
         {
             "name": "default",
             "code": "function c(e){let{title:t,scrollerClassName:l,scrollerInnerClassName:s,children:c}=e,f=n.useRef(null),[m,S]=n.useState(!1),[E,_]=n.useState(!1),h=n.useCallback(()=>{let{current:e}=f;null!=e&&(S(!e.isScrolledToTop()),_(!e.isScrolledToBottom()))},[]);return n.useLayoutEffect(()=>h(),[]),(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(\"div\",{className:i()(d.title,d.scrollWrapper),children:[(0,a.jsx)(r.FormTitle,{className:o.formItemTitle,children:t}),(0,a.jsx)(u.default,{separator:m})]}),(0,a.jsx)(\"div\",{className:l,children:(0,a.jsx)(r.AdvancedScroller,{ref:f,className:i()(d.scrollerInner,s,{[d.bottomSeparator]:E}),onScroll:h,children:c})})]})}"
-        }
-    ],
-    [
-        {
-            "name": "setHomeLink",
-            "code": "function a(e){n.default.dispatch({type:\"APP_VIEW_SET_HOME_LINK\",link:e})}"
         }
     ],
     [
@@ -2170,14 +1962,6 @@
         }
     ],
     [
-        {
-            "name": "dismissMediaPostSharePrompt",
-            "code": "function r(e){a.default.dispatch({type:\"DISMISS_MEDIA_POST_SHARE_PROMPT\",threadId:e})}"
-        },
-        {
-            "name": "fetchMediaPostEmbed",
-            "code": "async function o(e){a.default.dispatch({type:\"MEDIA_POST_EMBED_FETCH\",threadId:e});try{let t=(await s.HTTP.get({url:i.Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(e)})).body;a.default.dispatch({type:\"MEDIA_POST_EMBED_FETCH_SUCCESS\",threadId:e,mediaPostEmbed:t})}catch(t){a.default.dispatch({type:\"MEDIA_POST_EMBED_FETCH_FAILURE\",threadId:e})}}"
-        },
         {
             "name": "unfurlEmbedUrl",
             "code": "async function u(e){try{return(await s.HTTP.post({url:i.Endpoints.UNFURL_EMBED_URLS,body:{urls:e}})).body}catch(e){throw new l.APIError(e)}}"
@@ -2361,10 +2145,6 @@
             "code": "async function d(e){if(e.platform_type===r.PlatformTypes.XBOX){let t=e.parsed_launch_parameters.inviteToken;return!!(0,i.isWindows)()&&null!=t&&await I(t)}throw Error(\"Unsupported invite platform \"+e.platform_type)}"
         },
         {
-            "name": "clearUnseenInvites",
-            "code": "function c(){a.default.dispatch({type:\"GAME_INVITE_CLEAR_UNSEEN\"})}"
-        },
-        {
             "name": "deleteAllInvites",
             "code": "async function E(){await s.HTTP.del({url:r.Endpoints.GAME_INVITES})}"
         },
@@ -2375,10 +2155,6 @@
         {
             "name": "launchInviteGame",
             "code": "async function u(e){if(e.platform_type===r.PlatformTypes.XBOX){let t=e.parsed_launch_parameters.titleId;return!!(0,i.isWindows)()&&null!=t&&await m(t)}throw Error(\"Unsupported invite platform \"+e.platform_type)}"
-        },
-        {
-            "name": "updateInviteStatus",
-            "code": "async function o(e){if(e.platform_type===r.PlatformTypes.XBOX){let t=e.parsed_launch_parameters.titleId,n=e.parsed_launch_parameters.inviteToken;if(!(0,i.isWindows)()||null==t||null==n)return;let s=await _(t,!1),l=await T(n);a.default.dispatch({type:\"GAME_INVITE_UPDATE_STATUS\",inviteId:e.invite_id,installed:s,joinable:l})}else throw Error(\"Unsupported invite platform \"+e.platform_type)}"
         }
     ],
     [
@@ -2529,16 +2305,6 @@
     ],
     [
         {
-            "name": "closeSoundboardInOverlay",
-            "code": "function o(e){l.default.dispatch({type:\"SOUNDBOARD_SET_OVERLAY_ENABLED\",pid:e,enabled:!1}),!a.default.isInputLocked(e)&&l.default.dispatch({type:\"OVERLAY_SET_INPUT_LOCKED\",locked:!0,pid:e})}"
-        },
-        {
-            "name": "openSoundboardInOverlay",
-            "code": "function r(e,t){l.default.dispatch({type:\"OVERLAY_SET_INPUT_LOCKED\",locked:!1,pid:t}),l.default.dispatch({type:\"SOUNDBOARD_SET_OVERLAY_ENABLED\",pid:t,enabled:!0,keepOpen:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function i(e){let t=(0,a.useStateFromStores)([l.default],()=>l.default.getId());return(0,s.default)(t,e)===s.RequestToSpeakStates.ON_STAGE}"
         }
@@ -2611,16 +2377,6 @@
     ],
     [
         {
-            "name": "hide",
-            "code": "function u(){n.default.dispatch({type:\"HIDE_KEYBOARD_SHORTCUTS\"})}"
-        },
-        {
-            "name": "show",
-            "code": "function s(){n.default.dispatch({type:\"SHOW_KEYBOARD_SHORTCUTS\"})}"
-        }
-    ],
-    [
-        {
             "name": "getStageChannelMetadata",
             "code": "function E(e){let t=l.default.getStageInstanceByChannel(e.id);return{channel_id:e.id,guild_id:e.guild_id,topic:null==t?void 0:t.topic,media_session_id:a.default.getMediaSessionId(),request_to_speak_state:i.canEveryoneRole(o.Permissions.REQUEST_TO_SPEAK,e)?r.RequestToSpeakPermissionStates.EVERYONE:r.RequestToSpeakPermissionStates.NO_ONE,stage_instance_id:null==t?void 0:t.id}}"
         }
@@ -2677,28 +2433,6 @@
         {
             "name": "default",
             "code": "function(e,n,t){var r,o,u=a[e];r=\"other\"===u.type?u.other:1===n?u.one:n>1&&n<5?u.few:u.many;var i=(null==t?void 0:t.addSuffix)===!0,d=null==t?void 0:t.comparison;return(o=i&&-1===d?r.past:i&&1===d?r.future:r.regular).replace(\"{{count}}\",String(n))}"
-        }
-    ],
-    [
-        {
-            "name": "setSpeechRate",
-            "code": "function c(e){a.default.dispatch({type:\"SET_TTS_SPEECH_RATE\",speechRate:e})}"
-        },
-        {
-            "name": "speakMessage",
-            "code": "function n(e,t){a.default.dispatch({type:\"SPEAK_MESSAGE\",channel:e,message:t})}"
-        },
-        {
-            "name": "speakText",
-            "code": "function i(e,t,r,i,n){a.default.dispatch({type:\"SPEAK_TEXT\",text:e,interrupt:t,maxLength:r,onStart:i,onEnd:n})}"
-        },
-        {
-            "name": "speakingMessage",
-            "code": "function l(e,t){a.default.dispatch({type:\"SPEAKING_MESSAGE\",channelId:e,messageId:t})}"
-        },
-        {
-            "name": "stopSpeaking",
-            "code": "function o(){a.default.dispatch({type:\"STOP_SPEAKING\"})}"
         }
     ],
     [
@@ -2851,10 +2585,6 @@
     ],
     [
         {
-            "name": "init",
-            "code": "async function C(){if(null==l){if(!(d.isPlatformEmbedded&&((0,d.isMac)()||(0,d.isWindows)()))){new o.default(\"CloudSyncUtils\").warn(\"CloudSync is not supported on this platform\");return}await p.default.ensureModule(\"discord_cloudsync\"),(l=new(p.default.getCloudSync())).on(\"state\",t=>i.default.dispatch({type:\"GAME_CLOUD_SYNC_UPDATE\",state:t}))}}"
-        },
-        {
             "name": "syncApplication",
             "code": "function h(t,e){var n;let i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;if(!c.default.supportsCloudSync(t,e))return Promise.resolve({type:f.CloudSyncResultTypes.NONE});let o=function(){if(null==l)throw Error(\"Initialize cloud sync module before syncing.\");return l}(),d=c.default.getState(t,e);if(null==d)throw Error(\"No dispatch state for \".concat(t,\":\").concat(e));let p=null!==(n=d.storage)&&void 0!==n?n:{},C=(0,u.getComboId)(t,e),h=r.default.getToken();if(null==h)throw Error(\"Cannot use cloud sync when not authenticated.\");let y=null!=d.installPath?(0,s.default)(d.installPath):null;if(null==y)throw Error(\"No install path for \".concat(t,\":\").concat(e));let A=r.default.getId(),S={forceHash:i,manifestPath:f.DefaultCloudSyncConfiguration.STORAGE_MANIFEST(y,A),roots:null!=p.roots?p.roots:[{id:f.DefaultCloudSyncConfiguration.ROOT_ID,paths:Object.keys(f.DefaultCloudSyncConfiguration.ROOT_PLATFORMS).map(t=>({platform:t,path:f.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(y,A)})),patterns:f.DefaultCloudSyncConfiguration.ROOT_PATTERN}],storage:{baseURL:\"\".concat((0,a.getAPIBaseURL)()).concat(f.Endpoints.APPLICATION_STORAGE(t,e)),token:h},replacements:{INSTALLDIR:f.DefaultCloudSyncConfiguration.INSTALL_DIR(y),USERID:A,BRANCHID:e}};return o.sync(C,S)}"
         }
@@ -2879,60 +2609,8 @@
     ],
     [
         {
-            "name": "categoryCollapse",
-            "code": "function n(e){s.default.dispatch({type:\"CATEGORY_COLLAPSE\",id:e})}"
-        },
-        {
-            "name": "categoryCollapseAll",
-            "code": "function l(e){s.default.dispatch({type:\"CATEGORY_COLLAPSE_ALL\",guildId:e})}"
-        },
-        {
-            "name": "categoryExpand",
-            "code": "function i(e){s.default.dispatch({type:\"CATEGORY_EXPAND\",id:e})}"
-        },
-        {
-            "name": "categoryExpandAll",
-            "code": "function u(e){s.default.dispatch({type:\"CATEGORY_EXPAND_ALL\",guildId:e})}"
-        }
-    ],
-    [
-        {
             "name": "createAudioMP4FromVideoMP4",
             "code": "async function i(e){let t=n().createFile(),a=n().createFile(),l={};e.fileStart=0,t.onReady=e=>{for(let n of(a.init({duration:e.duration,timescale:e.timescale}),e.audioTracks))l[n.id]=n,t.setExtractionOptions(n.id,null,{nbSamples:1/0}),a.addTrack({id:n.id,timescale:n.timescale,hdlr:\"soun\",type:\"mp4a\",duration:n.duration,layer:n.layer,channel_count:n.audio.channel_count,samplerate:n.audio.sample_rate,samplesize:n.audio.sample_size,name:n.name});t.start()};let i=new Promise(e=>{t.onSamples=(n,i,r)=>{for(let e of r)a.addSample(n,e.data,e);t.releaseUsedSamples(n,r.length),delete l[n];let s=a.getTrackById(n),u=t.getTrackById(n);if(null!=u.edts){let e=u.edts.elst;s.add(\"edts\").boxes.push(e)}0===Object.keys(l).length&&e()}});return t.appendBuffer(e),t.flush(),await i,a.getBuffer()}"
-        }
-    ],
-    [
-        {
-            "name": "clearSearch",
-            "code": "function T(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];e&&(0,u.transitionTo)(h.Routes.GUILD_DISCOVERY),o.default.dispatch({type:\"GUILD_DISCOVERY_CLEAR_SEARCH\"})}"
-        },
-        {
-            "name": "createAlgoliaIndex",
-            "code": "function E(){if(null==C)return;let e=s()(\"NKTZZ4AIZU\",C,{responsesCache:(0,l.createNullCache)()}).initIndex(p);o.default.wait(()=>o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_INIT\",index:e}))}"
-        },
-        {
-            "name": "doAlgoliaSearch",
-            "code": "function e(t,n){let l=!(arguments.length>2)||void 0===arguments[2]||arguments[2],{categoryId:a=m.DISCOVERY_ALL_CATEGORIES_ID,preferredLocale:s,offset:c,length:C,tag:p}=n,E=d.default.getSearchIndex();if(null==E)return;l&&!function(e){let{query:t,preferredLocale:n,offset:l,limit:a,categoryId:s,tag:r}=e,o=(0,u.getHistory)(),d=i.stringify({query:t,offset:l,limit:a,preferredLocale:n,categoryId:s,tag:r}),c=o.location.search;(!(null!=c&&c.length>0&&c.startsWith(\"?\"))||c.startsWith(\"?\")&&c.split(\"?\")[1]!==d)&&(0,u.transitionTo)(h.Routes.GUILD_DISCOVERY,{search:d})}({query:t,preferredLocale:s,offset:c,limit:C,categoryId:a,tag:p}),o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_FETCH_START\",section:h.GuildDiscoverySections.SEARCH,query:t,categoryId:a});let S=Object.assign({},g,n.filters),_=Object.keys(S).map(e=>\"\".concat(e).concat(S[e]));a!==m.DISCOVERY_ALL_CATEGORIES_ID&&_.push(\"(primary_category_id=\".concat(a,\" OR categories.id=\").concat(a,\")\"));let I=_.join(\" AND \");try{let i=E.search(t,{filters:I,optionalFilters:[\"preferred_locale: \".concat(s)],length:C,offset:c,restrictSearchableAttributes:[\"name\",\"description\",\"keywords\",\"categories.name\",\"categories.name_localizations.\".concat(s),\"primary_category.name\",\"primary_category.name_localizations.\".concat(s),\"vanity_url_code\"]}),u=r.HTTP.get({url:h.Endpoints.GUILD_DISCOVERY_VALID_TERM,query:{term:t},oldFormErrors:!0});Promise.all([i,u]).then(e=>{let[{hits:n,nbHits:l},{body:{valid:s}}]=e;o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS\",section:h.GuildDiscoverySections.SEARCH,query:t,categoryId:a,guilds:s?[...n.map(e=>({...e,id:e.objectID}))]:[],offset:c,limit:C,total:s?Math.min(l,m.MAX_ALGOLIA_PAGINATOR_RESULTS):0})}).catch(s=>{s.body.retry_after>0&&E===d.default.getSearchIndex()?setTimeout(()=>{e(t,n,l)},s.body.retry_after*f.default.Millis.SECOND):o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_FETCH_FAILURE\",section:h.GuildDiscoverySections.SEARCH,categoryId:a,query:t})})}catch(e){o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_FETCH_FAILURE\",section:h.GuildDiscoverySections.SEARCH,categoryId:a,query:t})}}"
-        },
-        {
-            "name": "fetchFeaturedOrPopularGuilds",
-            "code": "async function I(e,t){o.default.dispatch({type:\"GUILD_DISCOVERY_FETCH_START\",section:h.GuildDiscoverySections.FEATURED});try{let n=await r.HTTP.get({url:h.Endpoints.GUILD_DISCOVERY,query:i.stringify({offset:e,limit:t}),oldFormErrors:!0});L(n.body,h.GuildDiscoverySections.FEATURED)}catch(e){o.default.dispatch({type:\"GUILD_DISCOVERY_FETCH_FAILURE\",section:h.GuildDiscoverySections.FEATURED})}}"
-        },
-        {
-            "name": "fetchGamesYouPlayGuilds",
-            "code": "async function N(){let e=Object.keys(c.default.applicationStatistics);o.default.dispatch({type:\"GUILD_DISCOVERY_FETCH_START\",section:h.GuildDiscoverySections.GAMES_YOU_PLAY});try{let t=await r.HTTP.get({url:h.Endpoints.GUILD_DISCOVERY,query:i.stringify({application_ids:e}),oldFormErrors:!0});L(t.body,h.GuildDiscoverySections.GAMES_YOU_PLAY)}catch(e){o.default.dispatch({type:\"GUILD_DISCOVERY_FETCH_FAILURE\",section:h.GuildDiscoverySections.GAMES_YOU_PLAY})}}"
-        },
-        {
-            "name": "fetchPopularGuildsForCategory",
-            "code": "async function _(e){o.default.dispatch({type:\"GUILD_DISCOVERY_POPULAR_FETCH_START\",categoryId:e});try{let{guilds:t}=(await r.HTTP.get({url:h.Endpoints.GUILD_DISCOVERY,query:i.stringify({categories:[e]}),oldFormErrors:!0})).body;o.default.dispatch({type:\"GUILD_DISCOVERY_POPULAR_FETCH_SUCCESS\",categoryId:e,guilds:t})}catch(t){o.default.dispatch({type:\"GUILD_DISCOVERY_POPULAR_FETCH_FAILURE\",categoryId:e})}}"
-        },
-        {
-            "name": "getSearchResultsCount",
-            "code": "function S(e,t){let n=d.default.getSearchIndex();if(null==n)return;let l=Object.assign({},g,t),a=Object.keys(l).map(e=>\"\".concat(e).concat(l[e]));try{let t=n.search(e,{filters:a.join(\" AND \"),facets:[\"categories.id\"]}),l=r.HTTP.get({url:h.Endpoints.GUILD_DISCOVERY_VALID_TERM,query:{term:e},oldFormErrors:!0});Promise.all([t,l]).then(t=>{let[{nbHits:n,facets:l},{body:{valid:a}}]=t;o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS\",query:e,nbHits:a?n:0,facets:a?l:void 0})})}catch(t){o.default.dispatch({type:\"GUILD_DISCOVERY_SEARCH_COUNTS_FAIL\",query:e})}}"
-        },
-        {
-            "name": "selectCategory",
-            "code": "function A(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];o.default.dispatch({type:\"GUILD_DISCOVERY_SELECT_CATEGORY\",categoryId:e,isHomepage:t})}"
         }
     ],
     [
@@ -3165,16 +2843,6 @@
     ],
     [
         {
-            "name": "mount",
-            "code": "function s(){a.default.dispatch({type:\"NOW_PLAYING_MOUNTED\"})}"
-        },
-        {
-            "name": "unmount",
-            "code": "function l(){a.default.dispatch({type:\"NOW_PLAYING_UNMOUNTED\"})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function p(e){let{code:t}=e,[n,p,h]=t.split(\"-\"),{guildScheduledEvent:N,guild:S,channel:C,isMember:g}=(0,l.useStateFromStoresObject)([_.default,c.default,u.default,d.default,f.default],()=>{var e,t;let s=null!==(t=_.default.getGuildScheduledEvent(p))&&void 0!==t?t:void 0,a=c.default.getGuild(n),l=u.default.getChannel(null==s?void 0:s.channel_id);return{guildScheduledEvent:s,guild:a,channel:l,isMember:d.default.isMember(n,null===(e=f.default.getCurrentUser())||void 0===e?void 0:e.id)}},[n,p]);return a.useEffect(()=>{(null==N?void 0:N.id)==null&&m.default.fetchGuildEvent(n,p),E.default.getGuildEventUserCounts(n,p,null!=h?[h]:[]),E.default.getGuildEventsForCurrentUser(n)},[p,n,null==N?void 0:N.id,h]),(0,s.jsx)(T.default,{guild:S,channel:C,guildScheduledEvent:N,isMember:g,onAcceptInstantInvite:I.NOOP,onTransitionToInviteChannel:function(){if((0,r.shouldShowMembershipVerificationGate)(n)){(0,i.openMemberVerificationModal)(n);return}(null==C?void 0:C.isGuildStageVoice())?(0,o.connectAndOpen)(C):(null==C?void 0:C.isGuildVoice())&&m.default.joinVoiceEvent(C.guild_id,C.id)},recurrenceId:h})}"
         }
@@ -3207,26 +2875,8 @@
     ],
     [
         {
-            "name": "fetchRoleConnectionsConfiguration",
-            "code": "function r(e,t){n.HTTP.get({url:i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e,t)}).then(e=>{let l=[];e.body.length>0&&(l=e.body.map(e=>e.map(e=>({connectionType:e.connection_type,connectionMetadataField:e.connection_metadata_field,applicationId:e.application_id,operator:e.operator,value:e.value})))),a.default.dispatch({type:\"GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS\",roleId:t,roleConnectionConfigurations:l})}).catch(()=>{})}"
-        },
-        {
             "name": "fetchUserApplicationRoleConnections",
             "code": "async function d(){return(await n.HTTP.get({url:i.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS})).body}"
-        },
-        {
-            "name": "putRoleConnectionsConfigurations",
-            "code": "async function o(e,t,l){let r=l.map(e=>e.map(e=>({connection_type:e.connectionType,connection_metadata_field:e.connectionMetadataField,application_id:e.applicationId,operator:e.operator,value:e.value}))),o=await n.HTTP.put({url:i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e,t),body:0===r.length?[]:r,oldFormErrors:!0}).then(e=>{let t=[];return e.body.length>0&&(t=e.body.map(e=>e.map(e=>({connectionType:e.connection_type,connectionMetadataField:e.connection_metadata_field,applicationId:e.application_id,operator:e.operator,value:e.value})))),t}),d=await (0,s.requestMembersForRole)(e,t,!1);null!=d&&a.default.dispatch({type:\"GUILD_ROLE_MEMBER_COUNT_UPDATE\",guildId:e,roleId:t,count:d}),a.default.dispatch({type:\"GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS\",roleId:t,roleConnectionConfigurations:o})}"
-        }
-    ],
-    [
-        {
-            "name": "loadStaticClanDiscovery",
-            "code": "function c(){return i.default.dispatch({type:\"FETCH_STATIC_CLAN_LIST_START\"}),l.HTTP.get({url:u.Endpoints.DISCOVERY_ALL_GAMES}).then(e=>{let t=e.body.clans.map(o.buildClanFromServer);i.default.dispatch({type:\"FETCH_STATIC_CLAN_LIST_SUCCESS\",clans:function(e){let t=new Set;return e.filter(e=>!t.has(e.id)&&(t.add(e.id),!0))}(t)})}).catch(e=>{i.default.dispatch({type:\"FETCH_STATIC_CLAN_LIST_FAILURE\",error:e})})}"
-        },
-        {
-            "name": "searchClanDiscovery",
-            "code": "async function f(e){var t,n,a;if(\"loaded\"===r.default.getSearchResult(e).status)return;let l=s().v3(JSON.stringify(e)),o=r.default.getStaticClans();let u=await (t=o,n=l,a=e,new Promise(e=>{let s=t=>{let{data:{id:a,sortedClans:l}}=t;n===a&&e(l),null==d||d.removeEventListener(\"message\",s)};null==d||d.addEventListener(\"message\",s);null==d||d.postMessage({id:n,unsortedClans:t,criteria:a})})),c={status:\"loaded\",loadedAt:Date.now(),items:u};i.default.dispatch({type:\"FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS\",criteriaHash:l,searchResult:c})}"
         }
     ],
     [
@@ -3257,12 +2907,6 @@
         {
             "name": "getPaymentPayoutGroups",
             "code": "async(e,t)=>(await a.HTTP.get({url:l.Endpoints.PAYMENT_PAYOUT_GROUPS(e),query:t})).body"
-        }
-    ],
-    [
-        {
-            "name": "removeAutomodMessageNotice",
-            "code": "function l(e){a.default.dispatch({type:\"REMOVE_AUTOMOD_MESSAGE_NOTICE\",messageId:e})}"
         }
     ],
     [
@@ -3349,12 +2993,6 @@
     ],
     [
         {
-            "name": "fetchStoreDirectoryLayout",
-            "code": "function s(e){return l.default.dispatch({type:\"APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING\",applicationId:e}),n.HTTP.get({url:a.Endpoints.STORE_LAYOUT(e)}).then(t=>(l.default.dispatch({type:\"APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS\",applicationId:e,listings:t.body}),t.body)).catch(()=>{l.default.dispatch({type:\"APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED\",applicationId:e})})}"
-        }
-    ],
-    [
-        {
             "name": "makeAutomodViolationError",
             "code": "function c(e,t){return r(1,(0,s.getAutomodErrorMessageFromErrorResponse)(e,null==t?void 0:t.id))}"
         },
@@ -3401,24 +3039,8 @@
     ],
     [
         {
-            "name": "loadInviteSuggestions",
-            "code": "function n(e){let{omitUserIds:t,guild:a,channel:n,applicationId:l,inviteTargetType:o}=e;return(0,s.fetchUserAffinities)().then(()=>{i.default.dispatch({type:\"LOAD_INVITE_SUGGESTIONS\",omitUserIds:null!=t?t:new Set,guild:a,channel:n,applicationId:l,inviteTargetType:o})})}"
-        },
-        {
-            "name": "searchInviteSuggestions",
-            "code": "function l(e){i.default.dispatch({type:\"INVITE_SUGGESTIONS_SEARCH\",query:e})}"
-        }
-    ],
-    [
-        {
             "name": "useShouldBlockDMInputForQuarantinedUser",
             "code": "(e,t)=>{let n=(0,l.useShowConvoStarterInDM)(t),r=(0,a.useStateFromStores)([s.default],()=>s.default.getMessages(t.id).length>0,[t]);return null!=e&&e.hasFlag(i.UserFlags.QUARANTINED)&&n&&!r}"
-        }
-    ],
-    [
-        {
-            "name": "default",
-            "code": "function m(){let e=(0,l.useStateFromStores)([d.default],()=>d.default.getCurrentUser()),[t,r]=i.useState(!1),[m,f]=i.useState(!1);return(0,a.jsxs)(\"div\",{className:h.container,children:[(0,a.jsx)(o.FormSection,{title:\"Override HQ Streaming: Available\",className:h.formElement,tag:o.FormTitleTags.H3,children:(0,a.jsx)(o.SingleSelect,{options:p,value:t,onChange:e=>{r(e)},popoutLayerContext:u.devToolsLayerContext})}),(0,a.jsx)(o.FormSection,{title:\"Override HQ Streaming: Activate\",className:h.formElement,tag:o.FormTitleTags.H3,children:(0,a.jsx)(o.SingleSelect,{options:g,value:m,onChange:e=>{f(e)},popoutLayerContext:u.devToolsLayerContext})}),(0,a.jsx)(o.Button,{onClick:()=>void(c.default.dispatch({type:\"PREMIUM_PERKS_DEMO_OVERRIDE\",perkType:n.EntitlementFeatureNames.STREAM_HIGH_QUALITY,user:e,available:t,activateSuccess:m}),(0,s.hqStreamingSetEnabled)(!1),(0,s.hqStreamingPopoutDismissed)(!1),(0,s.hqStreamingFrameAnimationPlayed)(!1),(0,s.hqStreamingUnlockAnimationPlayed)(!1)),children:\"Update\"})]})}"
         }
     ],
     [
@@ -3437,12 +3059,6 @@
         {
             "name": "default",
             "code": "function f(e){let{guild:t,show:n,active:a,onAnimationStart:f,onAnimationRest:h}=e,m={},C={};m.transform=\"translate3d(10px, 10px, 0) scale3d(3, 3, 1)\",C.transform=\"translate3d(0, 0, 0) scale3d(1, 1, 1)\";let p=(0,o.useToken)(r.default.unsafe_rawColors.BRAND_500).hex(),g=(0,o.useToken)(r.default.unsafe_rawColors.PRIMARY_630).hex();a&&null==t.icon&&(m.backgroundColor=p,C.backgroundColor=g);let E=(0,i.useTransition)(n,{from:m,enter:C,leave:m,config:{duration:100},onStart:f,onRest:h});return(0,l.jsx)(l.Fragment,{children:E((e,n,a)=>n&&(0,l.jsx)(\"div\",{className:s()(c.folder,c.hover),children:(0,l.jsx)(\"div\",{className:c.folderIconWrapper,children:(0,l.jsxs)(\"div\",{className:c.closedFolderIconWrapper,children:[(0,l.jsx)(i.animated.div,{className:c.folderIconPreview,style:e,children:(0,l.jsx)(u.default,{guild:t,size:u.default.Sizes.SMOL,className:c.guildIcon})}),(0,l.jsx)(d.default,{className:c.miniPlaceholder})]})})},a.key))})}"
-        }
-    ],
-    [
-        {
-            "name": "fetchGuildForPopout",
-            "code": "async function n(e){t.default.dispatch({type:\"GUILD_POPOUT_FETCH_START\",guildId:e});try{let l=await s.HTTP.get({url:i.Endpoints.GUILD_PREVIEW(e),oldFormErrors:!0});t.default.dispatch({type:\"GUILD_POPOUT_FETCH_SUCCESS\",guildId:e,guild:l.body})}catch(l){t.default.dispatch({type:\"GUILD_POPOUT_FETCH_FAILURE\",guildId:e})}}"
         }
     ],
     [
@@ -3899,20 +3515,6 @@
     ],
     [
         {
-            "name": "getLinkCodeForCurrentUser",
-            "code": "async function A(){await _.HTTP.get({url:s.Endpoints.FAMILY_CENTER_LINK_CODE}).then(e=>{let{body:t}=e,E=t.link_code;return T.default.dispatch({type:\"FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS\",linkCode:E}),E})}"
-        },
-        {
-            "name": "removeLinkForUserId",
-            "code": "async function i(e){await _.HTTP.del({url:s.Endpoints.FAMILY_CENTER_LINKED_USERS,body:{linked_user_id:e}}).then(t=>{let{body:E}=t;return T.default.dispatch({type:\"FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS\",linkedUsers:E,deletedUserId:e}),E})}"
-        },
-        {
-            "name": "updateLinkForUserId",
-            "code": "async function a(e,t){await _.HTTP.patch({url:s.Endpoints.FAMILY_CENTER_LINKED_USERS,body:{linked_user_id:e,link_status:t}}).then(e=>{let{body:t}=e;return T.default.dispatch({type:\"FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS\",linkedUsers:t}),t})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function _(e){let{className:t}=e,{showReminders:n}=d.default.useExperiment({location:\"f79435_1\"},{autoTrackExposure:!1}),a=(0,o.useStateFromStores)([c.default],()=>n?c.default.getOverdueMessageReminderCount():0,[n]),l=(0,o.useStateFromStores)([u.default],()=>u.default.useReducedMotion);return n?(0,s.jsx)(E,{count:a,className:t,reducedMotion:l}):null}"
         }
@@ -3979,20 +3581,6 @@
         {
             "name": "default",
             "code": "function i(){return(0,a.jsxs)(u.Switch,{children:[(0,a.jsx)(n.default,{path:h.Routes.OAUTH2_AUTHORIZED,component:r.OAuth2AuthorizedPage}),(0,a.jsx)(n.default,{path:h.Routes.OAUTH2_AUTHORIZE,component:c.OAuth2AuthorizePage}),(0,a.jsx)(n.default,{path:h.Routes.OAUTH2_ERROR,component:r.OAuth2ErrorPage}),(0,a.jsx)(n.default,{path:[h.Routes.OAUTH2_WHITELIST_ACCEPT,\"/oauth2/whitelist/accept\"],component:o.default})]})}"
-        }
-    ],
-    [
-        {
-            "name": "sortList",
-            "code": "function s(e,t){a.default.dispatch({type:\"LIBRARY_TABLE_SORT_UPDATE\",key:e,direction:t})}"
-        },
-        {
-            "name": "updateActiveRowKey",
-            "code": "function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];a.default.dispatch({type:\"LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE\",key:e,isKeyboardEvent:t})}"
-        },
-        {
-            "name": "updateLibraryFilter",
-            "code": "function l(e){a.default.dispatch({type:\"LIBRARY_APPLICATION_FILTER_UPDATE\",query:e})}"
         }
     ],
     [
@@ -4235,76 +3823,8 @@
     ],
     [
         {
-            "name": "learnWord",
-            "code": "function u(e){l.default.dispatch({type:\"SPELLCHECK_LEARN_WORD\",word:e})}"
-        },
-        {
-            "name": "toggleSpellcheck",
-            "code": "function s(){l.default.dispatch({type:\"SPELLCHECK_TOGGLE\"})}"
-        },
-        {
-            "name": "unlearnWord",
-            "code": "function a(e){l.default.dispatch({type:\"SPELLCHECK_UNLEARN_WORD\",word:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function n(e){let{color:t=\"currentColor\",foreground:l,backgroundColor:n=\"none\",...i}=e;return(0,s.jsxs)(\"svg\",{...(0,a.default)(i),width:\"272\",height:\"143\",viewBox:\"0 0 272 143\",fill:\"none\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,s.jsx)(\"rect\",{className:l,width:\"130\",height:\"143\",rx:\"12\",fill:n}),(0,s.jsx)(\"path\",{className:l,opacity:\"0.5\",d:\"M0 12C0 5.37259 5.37258 0 12 0H118C124.627 0 130 5.37258 130 12V83H0V12Z\",fill:t}),(0,s.jsx)(\"path\",{className:l,fillRule:\"evenodd\",clipRule:\"evenodd\",d:\"M57.641 30.3944C54.9317 30.3944 52.7354 32.488 52.7354 35.0705V49.0987C52.7354 51.6812 54.9317 53.7747 57.641 53.7747H72.358C75.0673 53.7747 77.2637 51.6812 77.2637 49.0987V35.0705C77.2637 32.488 75.0673 30.3944 72.358 30.3944H57.641ZM62.5467 37.4085C62.5467 36.117 61.4468 35.0705 60.0938 35.0705C58.7379 35.0705 57.641 36.117 57.641 37.4085C57.641 38.701 58.7379 39.7466 60.0938 39.7466C61.4468 39.7466 62.5467 38.701 62.5467 37.4085ZM61.3203 44.4226L57.641 49.0987H72.358L68.6787 40.9156L63.7731 46.7606L61.3203 44.4226Z\",fill:\"#C4C4C4\"}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"12\",y:\"99\",width:\"106\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"12\",y:\"123\",width:\"32\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"circle\",{className:l,opacity:\"0.5\",cx:\"54\",cy:\"127\",r:\"2\",fill:t,fillOpacity:\"0.48\"}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"64\",y:\"123\",width:\"54\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"rect\",{className:l,x:\"0.5\",y:\"0.5\",width:\"129\",height:\"142\",rx:\"11.5\",stroke:t,strokeOpacity:\"0.3\"}),(0,s.jsx)(\"rect\",{className:l,x:\"142\",width:\"130\",height:\"143\",rx:\"12\",fill:n}),(0,s.jsx)(\"path\",{className:l,opacity:\"0.5\",d:\"M142 12C142 5.37259 147.373 0 154 0H260C266.627 0 272 5.37258 272 12V83H142V12Z\",fill:t}),(0,s.jsx)(\"path\",{className:l,fillRule:\"evenodd\",clipRule:\"evenodd\",d:\"M199.641 30.3944C196.932 30.3944 194.735 32.488 194.735 35.0705V49.0987C194.735 51.6812 196.932 53.7747 199.641 53.7747H214.358C217.067 53.7747 219.264 51.6812 219.264 49.0987V35.0705C219.264 32.488 217.067 30.3944 214.358 30.3944H199.641ZM204.547 37.4085C204.547 36.117 203.447 35.0705 202.094 35.0705C200.738 35.0705 199.641 36.117 199.641 37.4085C199.641 38.701 200.738 39.7466 202.094 39.7466C203.447 39.7466 204.547 38.701 204.547 37.4085ZM203.32 44.4226L199.641 49.0987H214.358L210.679 40.9156L205.773 46.7606L203.32 44.4226Z\",fill:\"#C4C4C4\"}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"154\",y:\"99\",width:\"106\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"154\",y:\"123\",width:\"32\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"circle\",{className:l,opacity:\"0.5\",cx:\"196\",cy:\"127\",r:\"2\",fill:t,fillOpacity:\"0.48\"}),(0,s.jsx)(\"rect\",{className:l,opacity:\"0.5\",x:\"206\",y:\"123\",width:\"54\",height:\"8\",rx:\"4\",fill:t}),(0,s.jsx)(\"rect\",{className:l,x:\"142.5\",y:\"0.5\",width:\"129\",height:\"142\",rx:\"11.5\",stroke:t,strokeOpacity:\"0.3\"})]})}"
-        }
-    ],
-    [
-        {
-            "name": "addGuildCategory",
-            "code": "function p(e,t){n.HTTP.put({url:o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e,t),oldFormErrors:!0}).then(()=>{r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_ADD\",guildId:e,categoryId:t})}).catch(t=>{r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL\",guildId:e,errors:t.body})})}"
-        },
-        {
-            "name": "deleteGuildCategory",
-            "code": "function I(e,t){n.HTTP.del({url:o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e,t),oldFormErrors:!0}).then(()=>{r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_DELETE\",guildId:e,categoryId:t})}).catch(t=>{r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL\",guildId:e,errors:t.body})})}"
-        },
-        {
-            "name": "fetchMetadataForGuild",
-            "code": "async function c(e){try{let{primary_category_id:t,category_ids:a,keywords:i,emoji_discoverability_enabled:s,partner_actioned_timestamp:l,partner_application_timestamp:d,is_published:c,reasons_to_join:u,social_links:f,about:m}=(await n.HTTP.get({url:o.Endpoints.GUILD_DISCOVERY_METADATA(e),oldFormErrors:!0})).body,E={primaryCategoryId:t,secondaryCategoryIds:a,keywords:i,emojiDiscoverabilityEnabled:s,partnerActionedTimestamp:l,partnerApplicationTimestamp:d,isPublished:c,reasonsToJoin:u,socialLinks:f,about:m};return r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER\",guildId:e,metadata:E}),E}catch(e){r.default.dispatch({type:\"GUILD_DISCOVERY_METADATA_FETCH_FAIL\"})}}"
-        },
-        {
-            "name": "fetchSlugForGuild",
-            "code": "async function u(e){try{let t=(await n.HTTP.get({url:o.Endpoints.GUILD_DISCOVERY_SLUG(e)})).body.slug;r.default.dispatch({type:\"GUILD_DISCOVERY_SLUG_FETCH_SUCCESS\",slug:t})}catch{r.default.dispatch({type:\"GUILD_DISCOVERY_SLUG_FETCH_FAIL\",guildId:e})}}"
-        },
-        {
-            "name": "maybeFetchGuildDiscoveryCategories",
-            "code": "async function d(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],a=i.default.locale,d=t&&!s.default.getIsReady();if(a===l.default.getFetchedLocale()&&!d)return;let c=await n.HTTP.get({url:o.Endpoints.GUILD_DISCOVERY_CATEGORIES,query:{locale:a,primary_only:e},oldFormErrors:!0});r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS\",categories:c.body,locale:a,forClanDiscovery:t})}"
-        },
-        {
-            "name": "saveGuildMetadata",
-            "code": "async function x(e){let{guildId:t,primaryCategoryId:a,keywords:i,emojiDiscoverabilityEnabled:s,partnerActionedTimestamp:l,partnerApplicationTimestamp:d,isPublished:c,reasonsToJoin:u,socialLinks:f,about:m}=e;try{let{primary_category_id:e,category_ids:E,keywords:h,emoji_discoverability_enabled:T,partner_actioned_timestamp:_,partner_application_timestamp:C,is_published:x,reasons_to_join:p,social_links:I,about:g}=(await n.HTTP.patch({url:o.Endpoints.GUILD_DISCOVERY_METADATA(t),body:{primary_category_id:a,emoji_discoverability_enabled:s,partner_actioned_timestamp:l,partner_application_timestamp:d,keywords:i,is_published:c,reasons_to_join:u,social_links:f,about:m},oldFormErrors:!0})).body;r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER\",guildId:t,metadata:{primaryCategoryId:e,secondaryCategoryIds:E,keywords:h,emojiDiscoverabilityEnabled:T,partnerActionedTimestamp:_,partnerApplicationTimestamp:C,isPublished:x,reasonsToJoin:p,socialLinks:I,about:g}})}catch(e){throw r.default.dispatch({type:\"GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL\",guildId:t,errors:e.body}),e}}"
-        },
-        {
-            "name": "updateGuildDiscoveryMetadataAbout",
-            "code": "function T(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,about:t})}"
-        },
-        {
-            "name": "updateGuildDiscoveryMetadataIsPublished",
-            "code": "function h(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,isPublished:t})}"
-        },
-        {
-            "name": "updateGuildDiscoveryMetadataReasonsToJoin",
-            "code": "function _(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,reasonsToJoin:t})}"
-        },
-        {
-            "name": "updateGuildDiscoveryMetadataSocialLinks",
-            "code": "function C(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,socialLinks:t})}"
-        },
-        {
-            "name": "updateGuildEmojiDiscoverabilityEnabled",
-            "code": "function E(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,emojiDiscoverabilityEnabled:t})}"
-        },
-        {
-            "name": "updateGuildKeywords",
-            "code": "function m(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,keywords:t})}"
-        },
-        {
-            "name": "updateGuildPrimaryCategory",
-            "code": "function f(e,t){r.default.dispatch({type:\"GUILD_UPDATE_DISCOVERY_METADATA\",guildId:e,primaryCategoryId:t})}"
         }
     ],
     [
@@ -4629,16 +4149,6 @@
     ],
     [
         {
-            "name": "stopWatchingCandidateGames",
-            "code": "function r(){if(!(0,n.isDesktop)())throw Error(\"Attempted to stop observing candidate games on a non-desktop platform\");i.default.clearCandidateGamesCallback(),a.default.dispatch({type:\"GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP\"})}"
-        },
-        {
-            "name": "watchCandidateGames",
-            "code": "function l(){if(!(0,n.isDesktop)())throw Error(\"Attempted to observe candidate games on a non-desktop platform\");i.default.setCandidateGamesCallback(e=>{a.default.dispatch({type:\"CANDIDATE_GAMES_CHANGE\",games:e})}),a.default.dispatch({type:\"GAME_DETECTION_WATCH_CANDIDATE_GAMES_START\"})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function o(e){let{expansionSpring:t,isExpanded:s}=e,{animatedComponentProps:o,recalculateAnimationPositions:u}=a.useContext(r.QuestBarV2AnimationContext),d=a.useContext(i.QuestBarPreviewContext);return a.useEffect(()=>{u()},[u,s]),(0,n.jsx)(\"div\",{style:{overflow:\"hidden\",position:\"absolute\",top:0,left:0,width:\"100%\",height:\"100%\"},children:o.map(e=>{let{id:s,collapsedLeft:a,expandedLeft:i,collapsedTop:r,expandedTop:o,collapsedRight:u,expandedRight:c}=e;return(0,n.jsx)(l.animated.div,{id:d?\"quest-bar-v2-preview-\"+s:\"quest-bar-v2-\"+s,style:{zIndex:2,position:\"absolute\",top:t.to({range:[0,1],output:[r,o]}),right:Math.min(u,c),left:t.to({range:[0,1],output:[a,i]})}},s)})})}"
         }
@@ -4657,12 +4167,6 @@
     ],
     [
         {
-            "name": "fetchTopReadChannels",
-            "code": "function i(e){return a.HTTP.get({url:n.Endpoints.GUILD_TOP_READ_CHANNELS(e),oldFormErrors:!0}).then(t=>{let{body:s}=t;l.default.dispatch({type:\"GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS\",guildId:e,topChannelIds:s})})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function A(e){let{channel:t,children:n,gotoChannel:a,mentionCount:l,channelState:r,toggleCollapsed:u}=e,d=(0,i.useListItem)(\"recents-header-\".concat(t.id,\"-\").concat((0,N.useUID)()));return(0,s.jsx)(o.FocusRing,{offset:g,children:(0,s.jsxs)(\"div\",{className:C.channelHeader,...d,tabIndex:0,\"data-recents-channel\":t.id,onKeyDown:function(e){null!=u&&null!=r&&(\"ArrowRight\"===e.key&&r.collapsed||\"ArrowLeft\"===e.key&&!r.collapsed)&&(null==u||u(r))},children:[(0,s.jsx)(M,{channel:t,gotoChannel:a}),(0,s.jsx)(O,{channel:t,gotoChannel:a,mentionCount:l}),n]})})}"
         }
@@ -4677,24 +4181,6 @@
         {
             "name": "default",
             "code": "function f(){var e;let{guild:t}=(0,n.useStateFromStores)([E.default],()=>E.default.getProps(),[],l.isEqual),s=null!==(e=null==t?void 0:t.id)&&void 0!==e?e:_.EMPTY_STRING_SNOWFLAKE_ID;return(0,r.useCanAccessMemberSafetyPage)(s)?(0,a.jsx)(d.default,{guildId:s}):null}"
-        }
-    ],
-    [
-        {
-            "name": "addInstallLocation",
-            "code": "function l(e){s.default.queryDirectory(e,(t,n)=>{null==t&&null!=n&&a.default.dispatch({type:\"INSTALLATION_LOCATION_ADD\",path:e,metadata:n})})}"
-        },
-        {
-            "name": "fetchMetadata",
-            "code": "function o(e){let t={},n=0;for(let l of e)null!=l&&\"string\"==typeof l&&s.default.queryDirectory(l,(s,i)=>{++n,null==s&&null!=i&&(t[l]=i),n===e.length&&a.default.dispatch({type:\"INSTALLATION_LOCATION_FETCH_METADATA\",metadataPayload:t})})}"
-        },
-        {
-            "name": "removeInstallLocation",
-            "code": "function i(e){a.default.dispatch({type:\"INSTALLATION_LOCATION_REMOVE\",path:e})}"
-        },
-        {
-            "name": "updateInstallLocation",
-            "code": "function r(e,t){let{label:n,isDefault:s}=t;a.default.dispatch({type:\"INSTALLATION_LOCATION_UPDATE\",path:e,label:n,isDefault:s})}"
         }
     ],
     [
@@ -4885,12 +4371,6 @@
         {
             "name": "ThreadPlusIcon",
             "code": "e=>{let{width:t=24,height:n=24,color:i=l.default.colors.INTERACTIVE_NORMAL,colorClass:r=\"\",...o}=e;return(0,a.jsx)(\"svg\",{...(0,s.default)(o),xmlns:\"http://www.w3.org/2000/svg\",width:t,height:n,fill:\"none\",viewBox:\"0 0 24 24\",children:(0,a.jsx)(\"path\",{d:\"M19 14a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 1-1ZM12 19c0-.22.03-.44.08-.66a.56.56 0 0 0-.21-.58l-8.84-6.22a1 1 0 0 0-1.3.13l-.69.69a1 1 0 0 0 0 1.41l9.2 9.2a1 1 0 0 0 1.4 0l.36-.36a1 1 0 0 0 0-1.41l-.35-.36.37-.37a.56.56 0 0 0 .12-.56A3 3 0 0 1 12 19ZM15 16h.16c.33 0 .56-.32.3-.53a.98.98 0 0 0-.07-.06L6.9 9.76a1 1 0 1 0-1.1 1.66l7.3 4.88c.17.1.39.1.56.02.4-.2.86-.32 1.34-.32ZM15.82 13.39c.25.17.6.07.77-.17.12-.17.26-.32.42-.46.29-.26.32-.76 0-.98L9.73 6.93a1 1 0 0 0-1.11 1.66l7.2 4.8ZM12 2.81a1 1 0 0 1 0-1.41l.36-.36a1 1 0 0 1 1.41 0l9.2 9.2a1 1 0 0 1 0 1.4l-.7.7a1 1 0 0 1-1.3.13l-9.54-6.72a1 1 0 0 1-.08-1.58l1-1L12 2.8Z\",fill:\"string\"==typeof i?i:i.css,className:r})})}"
-        }
-    ],
-    [
-        {
-            "name": "closeModal",
-            "code": "function a(e){l.default.dispatch({type:\"PREMIUM_REQUIRED_MODAL_CLOSE\",shouldContinue:e})}"
         }
     ],
     [
@@ -5261,12 +4741,6 @@
     ],
     [
         {
-            "name": "sync",
-            "code": "async function c(t,e){let n,a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;l.default.dispatch({type:\"GAME_CLOUD_SYNC_START\",applicationId:t,branchId:e});try{if((n=await i.syncApplication(t,e,a)).type===o.CloudSyncResultTypes.CONFLICT)throw l.default.dispatch({type:\"GAME_CLOUD_SYNC_CONFLICT\",applicationId:t,branchId:e,next:n.next,remote:n.remote}),new r(\"Conflict in cloud sync.\");(n.type===o.CloudSyncResultTypes.PULL||n.type===o.CloudSyncResultTypes.PUSH)&&s.info(\"Sync complete\",n)}catch(n){if(n instanceof r)throw n;throw l.default.dispatch({type:\"GAME_CLOUD_SYNC_ERROR\",applicationId:t,branchId:e}),s.error(\"Failed to cloud sync:\",n),Error(\"Failed to cloud sync.\")}return l.default.dispatch({type:\"GAME_CLOUD_SYNC_COMPLETE\",applicationId:t,branchId:e}),n}"
-        }
-    ],
-    [
-        {
             "name": "processImages",
             "code": "async function c(e,t){let s=[];for(let a=0;a<e.length;a++){let l=e[a];try{let{image:e,dataURI:a}=await u(l),n=l.type===d.FileTypes.MP4?await t(a,l):await t(a,l,e);null!=n&&s.push({type:n,filename:l.name})}catch(e){s.push({type:e,filename:l.name})}}s.length>0&&E(s)}"
         }
@@ -5347,12 +4821,6 @@
     ],
     [
         {
-            "name": "fetchGuildAffinities",
-            "code": "()=>n.HTTP.get({url:l.Endpoints.GUILD_AFFINITIES,oldFormErrors:!0}).then(e=>{let{body:{guild_affinities:t}}=e;a.default.dispatch({type:\"LOAD_GUILD_AFFINITIES_SUCCESS\",guildAffinities:t})},()=>{a.default.dispatch({type:\"LOAD_GUILD_AFFINITIES_FAILURE\"})})"
-        }
-    ],
-    [
-        {
             "name": "useIsDismissibleContentTypeDismissed",
             "code": "function r(e){let t=(0,i.useNewUserDismissibleContent)([e]),n=(0,a.useStateFromStores)([l.default],()=>{var e;return null===(e=l.default.settings.userContent)||void 0===e?void 0:e.dismissedContents});return 0===t.length||null!=n&&(0,s.hasBit)(n,e)}"
         }
@@ -5385,12 +4853,6 @@
         {
             "name": "default",
             "code": "function n(e,t){if(null==e)return{};var r,n,s=(0,a.default)(e,t);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);for(n=0;n<o.length;n++){if(r=o[n],!(t.indexOf(r)>=0))Object.prototype.propertyIsEnumerable.call(e,r)&&(s[r]=e[r])}}return s}"
-        }
-    ],
-    [
-        {
-            "name": "default",
-            "code": "function r(){(0,s.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e(\"49237\"),n.e(\"99387\"),n.e(\"52030\"),n.e(\"93669\"),n.e(\"55944\")]).then(n.bind(n,\"266653\"));return t=>(0,a.jsx)(e,{...t})},{onCloseCallback:()=>{l.default.dispatch({type:\"CLEAR_AUTHENTICATION_ERRORS\"}),l.default.dispatch({type:\"LOGIN_RESET\",isMultiAccount:!0})},modalKey:i.SWITCH_ACCOUNTS_MODAL_KEY})}"
         }
     ],
     [
@@ -5671,20 +5133,6 @@
         {
             "name": "default",
             "code": "function(t,e,n,i){return a[t]}"
-        }
-    ],
-    [
-        {
-            "name": "authorizeAndSetTestModeApplication",
-            "code": "async function f(e,t){s.default.dispatch({applicationId:e,type:\"DEVELOPER_TEST_MODE_AUTHORIZATION_START\"});try{if(!await (0,a.validateTestMode)(e))throw Error(\"Do not have access!\");let n=i.default.getApplication(e);null==n&&(n=r.default.createFromServer(await l.default.fetchApplication(e)));let f=(0,o.hasFlag)(n.flags,c.ApplicationFlags.EMBEDDED);if(f&&(null==t||!u.default.URL_REGEX.test(t)))throw Error(\"Invalid Origin URL for embedded application\");return!f&&d.createTestModeLibraryApplications(n),s.default.dispatch({type:\"DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS\",applicationId:e,originURL:f?t:null}),n}catch(t){return s.default.dispatch({type:\"DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL\",applicationId:e,error:t.message}),null}}"
-        },
-        {
-            "name": "reset",
-            "code": "function E(){s.default.dispatch({type:\"DEVELOPER_TEST_MODE_RESET\"})}"
-        },
-        {
-            "name": "resetError",
-            "code": "function _(){s.default.dispatch({type:\"DEVELOPER_TEST_MODE_RESET_ERROR\"})}"
         }
     ],
     [
@@ -6199,16 +5647,6 @@
         {
             "name": "renderSimpleAccessories",
             "code": "function r(e,t){let{message:n,channel:a,compact:i=!1,renderThreadAccessory:r,disableReactionCreates:o,disableReactionUpdates:u}=e;return(0,s.jsx)(l.SimpleMessageAccessories,{message:n,channel:a,compact:i,hasSpoilerEmbeds:t,renderThreadAccessory:r,disableReactionCreates:o,disableReactionUpdates:u})}"
-        }
-    ],
-    [
-        {
-            "name": "voiceCategoryCollapse",
-            "code": "function s(e){l.default.dispatch({type:\"VOICE_CATEGORY_COLLAPSE\",guildId:e,expand:!1})}"
-        },
-        {
-            "name": "voiceCategoryExpand",
-            "code": "function a(e){l.default.dispatch({type:\"VOICE_CATEGORY_EXPAND\",guildId:e,expand:!0})}"
         }
     ],
     [
@@ -6745,42 +6183,6 @@
     ],
     [
         {
-            "name": "fetchLogs",
-            "code": "function I(e,t,E,s){if(!A()&&null!=e)return _.default.dispatch({type:\"AUDIT_LOG_FETCH_START\"}),n(e,{userId:t,action:s,targetId:E}).then(e=>{let{audit_log_entries:t,integrations:E,users:s,webhooks:T,guild_scheduled_events:a,auto_moderation_rules:A,threads:n,application_commands:I}=e.body;_.default.dispatch({type:\"AUDIT_LOG_FETCH_SUCCESS\",logs:t,integrations:E,users:s,webhooks:T,guildScheduledEvents:a,automodRules:A,threads:n,applicationCommands:I})},()=>_.default.dispatch({type:\"AUDIT_LOG_FETCH_FAIL\"}))}"
-        },
-        {
-            "name": "fetchNextLogPage",
-            "code": "function u(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(!T.default.hasOlderLogs||A()||null==e)return;let E=T.default.logs,s=E[E.length-1],a=null;return null!=s&&(a=s.id),_.default.dispatch({type:\"AUDIT_LOG_FETCH_NEXT_PAGE_START\",before:a,isGroupedFetch:t}),n(e,{before:a}).then(e=>{let{audit_log_entries:t,integrations:E,users:s,webhooks:T,guild_scheduled_events:a,auto_moderation_rules:A,threads:n,application_commands:I}=e.body;_.default.dispatch({type:\"AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS\",logs:t,integrations:E,users:s,webhooks:T,guildScheduledEvents:a,automodRules:A,threads:n,applicationCommands:I})},()=>_.default.dispatch({type:\"AUDIT_LOG_FETCH_NEXT_PAGE_FAIL\"}))}"
-        },
-        {
-            "name": "filterByAction",
-            "code": "function i(e,t){if(!A()&&null!=t)return _.default.dispatch({type:\"AUDIT_LOG_FILTER_BY_ACTION\",action:e}),I(t,null,null,e)}"
-        },
-        {
-            "name": "filterByTargetId",
-            "code": "function L(e,t){if(!A()&&null!=t)return _.default.dispatch({type:\"AUDIT_LOG_FILTER_BY_TARGET\",targetId:e}),I(t,null,e)}"
-        },
-        {
-            "name": "filterByUserId",
-            "code": "function l(e,t){if(!A()&&null!=t)return _.default.dispatch({type:\"AUDIT_LOG_FILTER_BY_USER\",userId:e}),I(t,e)}"
-        }
-    ],
-    [
-        {
-            "name": "removeAccount",
-            "code": "function h(e){l.default.dispatch({type:\"MULTI_ACCOUNT_REMOVE_ACCOUNT\",userId:e})}"
-        },
-        {
-            "name": "switchAccount",
-            "code": "function E(e,t){c.log(\"Switching account to \".concat(e),{switchSynchronously:t});let n=a.getToken(e);return null==n?(c.log(\"Switching accounts failed because there was no token\"),l.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\",userId:e}),Promise.resolve()):i.default.switchAccountToken(n,t)}"
-        },
-        {
-            "name": "validateMultiAccountTokens",
-            "code": "function f(){let e=o.default.getId();u.default.getUsers().forEach(async t=>{let n,{id:i}=t,r=a.getToken(i);if(null==r||\"\"===r){l.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\",userId:i});return}l.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST\",userId:i});try{n=await s.HTTP.get({url:d.Endpoints.ME,headers:{authorization:r},retries:3})}catch(t){let e=(null==t?void 0:t.status)===401||(null==t?void 0:t.status)===403;l.default.dispatch({type:e?\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\":\"MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS\",userId:i});return}l.default.dispatch({type:e===i?\"CURRENT_USER_UPDATE\":\"USER_UPDATE\",user:n.body}),l.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS\",userId:i})})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function o(e){let{hasMentions:t,truncatedCount:n,className:l}=e;return(0,a.jsx)(i.Text,{className:s()(r.unreadCount,l,{[r.mention]:t}),variant:\"text-xs/normal\",children:n})}"
         }
@@ -6949,24 +6351,6 @@
     ],
     [
         {
-            "name": "overrideSurvey",
-            "code": "function d(e){l.default.dispatch({type:\"SURVEY_OVERRIDE\",id:e})}"
-        },
-        {
-            "name": "surveyFetch",
-            "code": "function f(e,t){var n={};return null!=e&&(n.survey_override=e),null!=t&&(n.disable_auto_seen=t),o.default.get({url:u.Endpoints.USER_SURVEY,query:n,trackedActionData:{event:s.NetworkActionNames.USER_SURVEY_FETCH,properties:e=>{var t;let n=null==e?void 0:null===(t=e.body)||void 0===t?void 0:t.survey;return(0,a.exact)({key:null==n?void 0:n.key})}}}).then(e=>{var t;l.default.dispatch({type:\"SURVEY_FETCHED\",survey:null==e?void 0:null===(t=e.body)||void 0===t?void 0:t.survey})},()=>{l.default.dispatch({type:\"SURVEY_FETCHED\",survey:null})})}"
-        },
-        {
-            "name": "surveyHide",
-            "code": "function c(e,t){l.default.dispatch({type:\"SURVEY_HIDE\",key:e}),t?r.default.track(u.AnalyticEvents.APP_NOTICE_CLOSED,{notice_type:u.NoticeTypes.SURVEY,survey_id:e,dismissed:t}):r.default.track(u.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED,{notice_type:u.NoticeTypes.SURVEY})}"
-        },
-        {
-            "name": "surveySeen",
-            "code": "function E(e){let t=i.default.getLastSeenTimestamp();if(null===t||null!=t&&Date.now()-t>=i.SURVEY_REFETCH_INTERVAL)return l.default.dispatch({type:\"SURVEY_SEEN\",key:e}),o.default.post({url:u.Endpoints.USER_SURVEY_SEEN(e),trackedActionData:{event:s.NetworkActionNames.USER_SURVEY_SEEN,properties:t=>(0,a.exact)({key:e})}})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function s(e){let{application:t,showMutualGuilds:l=!0}=e,s=(0,i.useStateFromStores)([a.default],()=>a.default.getGuildIdsForApplication(null==t?void 0:t.id),[t]),o=(0,i.useStateFromStores)([r.default],()=>r.default.isLoaded());return n.useMemo(()=>{let e=[];if(!o||!l||null==s||null==t)return e;for(let t of s){let l=r.default.getGuild(t);null!=l&&e.push(l)}return e},[o,s,t,l])}"
         }
@@ -7095,20 +6479,6 @@
         {
             "name": "default",
             "code": "function l(e){let{width:t=18,height:s=18,color:l=\"currentColor\",...i}=e;return(0,n.jsxs)(\"svg\",{...(0,a.default)(i),width:t,height:s,viewBox:\"0 0 18 18\",children:[(0,n.jsx)(\"path\",{fill:l,d:\"M1.8 1.8V6H6V1.8H1.8Zm3 3H3V3h1.8v1.8ZM1.8 12v4.2H6V12H1.8Zm3 3H3v-1.8h1.8V15ZM12 1.8V6h4.2V1.8H12Zm3 3h-1.8V3H15v1.8ZM7.2 1.8V3h2.4v3h1.2V1.8H7.2ZM6 9.6H4.2v1.2H6V9.6Z\"}),(0,n.jsx)(\"path\",{fill:l,d:\"M7.2 4.2v3H1.8v3.6H3V8.4h5.4V4.2H7.2ZM12.417 10.75c-.92 0-1.667.748-1.667 1.667 0 .92.748 1.666 1.667 1.666s1.666-.747 1.666-1.666c0-.92-.747-1.667-1.666-1.667Z\"}),(0,n.jsx)(\"path\",{fill:l,d:\"M15.75 9.5h-.804a.834.834 0 0 1-.694-.37l-.338-.509a.834.834 0 0 0-.693-.371h-1.608a.835.835 0 0 0-.694.37l-.338.51a.833.833 0 0 1-.694.37h-.804a.833.833 0 0 0-.833.833v4.584c0 .46.373.833.833.833h6.667c.46 0 .833-.373.833-.833v-4.584a.834.834 0 0 0-.833-.833Zm-3.333 5.417a2.503 2.503 0 0 1-2.5-2.5c0-1.379 1.12-2.5 2.5-2.5 1.378 0 2.5 1.121 2.5 2.5s-1.122 2.5-2.5 2.5Z\"})]})}"
-        }
-    ],
-    [
-        {
-            "name": "hideLiveChannelNotice",
-            "code": "function s(e){let{eventId:t,stageId:n}=e;(null!=t||null!=n)&&a.default.dispatch({type:\"LIVE_CHANNEL_NOTICE_HIDE\",eventId:t,stageId:n})}"
-        },
-        {
-            "name": "hideUpcomingEventNotice",
-            "code": "function l(e){a.default.dispatch({type:\"UPCOMING_GUILD_EVENT_NOTICE_HIDE\",eventId:e})}"
-        },
-        {
-            "name": "markUpcomingEventNoticeAsSeen",
-            "code": "function i(e){a.default.dispatch({type:\"UPCOMING_GUILD_EVENT_NOTICE_SEEN\",guildEventId:e})}"
         }
     ],
     [
@@ -7351,32 +6721,6 @@
     ],
     [
         {
-            "name": "clearWelcomeScreenSettings",
-            "code": "()=>{_.default.dispatch({type:\"WELCOME_SCREEN_SETTINGS_CLEAR\"})}"
-        },
-        {
-            "name": "fetchWelcomeScreen",
-            "code": "async e=>{_.default.dispatch({type:\"WELCOME_SCREEN_FETCH_START\"});try{let t=await s.HTTP.get({url:T.Endpoints.GUILD_WELCOME_SCREEN(e),oldFormErrors:!0});return _.default.dispatch({type:\"WELCOME_SCREEN_FETCH_SUCCESS\",guildId:e,welcomeScreen:t.body}),t.body}catch(e){_.default.dispatch({type:\"WELCOME_SCREEN_FETCH_FAIL\"})}}"
-        },
-        {
-            "name": "resetWelcomeScreen",
-            "code": "()=>{_.default.dispatch({type:\"WELCOME_SCREEN_SETTINGS_RESET\"})}"
-        },
-        {
-            "name": "saveWelcomeScreen",
-            "code": "async(e,t)=>{_.default.dispatch({type:\"WELCOME_SCREEN_SUBMIT\"});try{let E=await s.HTTP.patch({url:T.Endpoints.GUILD_WELCOME_SCREEN(e),body:{description:t.description,welcome_channels:t.channels,enabled:t.enabled},oldFormErrors:!0});_.default.dispatch({type:\"WELCOME_SCREEN_SUBMIT_SUCCESS\",guildId:e,welcomeScreen:E.body})}catch(e){_.default.dispatch({type:\"WELCOME_SCREEN_SUBMIT_FAILURE\"})}}"
-        },
-        {
-            "name": "updateSettings",
-            "code": "e=>{_.default.dispatch({type:\"WELCOME_SCREEN_SETTINGS_UPDATE\",settings:e})}"
-        },
-        {
-            "name": "welcomeScreenViewed",
-            "code": "function(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];_.default.dispatch({type:\"WELCOME_SCREEN_VIEW\",guildId:e,isLurking:t})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function u(e){return(0,r.default)(class extends s.Component{render(){return(0,a.jsx)(e,{...this.props,onMessageUser:this.handleMessageUser,onUserContextMenu:this.handleUserContextMenu,onGuildContextMenu:this.handleGuildContextMenu,onChannelContextMenu:this.handleChannelContextMenu})}handleMessageUser(e,t){return l.default.openPrivateChannel(t.id)}handleUserContextMenu(e,t,s){(0,i.openContextMenuLazy)(e,async()=>{let{default:e}=await Promise.all([n.e(\"99387\"),n.e(\"36441\"),n.e(\"69220\")]).then(n.bind(n,\"881351\"));return n=>(0,a.jsx)(e,{...n,user:t})},{onClose:s})}handleGuildContextMenu(e,t){(0,i.openContextMenuLazy)(e,async()=>{let{default:e}=await Promise.all([n.e(\"49237\"),n.e(\"99387\"),n.e(\"96427\"),n.e(\"7654\"),n.e(\"33053\"),n.e(\"32493\"),n.e(\"75475\"),n.e(\"85093\"),n.e(\"85552\"),n.e(\"58227\"),n.e(\"43502\"),n.e(\"69760\"),n.e(\"33213\")]).then(n.bind(n,\"545135\"));return n=>(0,a.jsx)(e,{...n,guild:t})})}handleChannelContextMenu(e,t){let s=o.default.getGuild(t.getGuildId());if(null==s)return null;(0,i.openContextMenuLazy)(e,async()=>{let{default:e}=await n.e(\"40283\").then(n.bind(n,\"428108\"));return n=>(0,a.jsx)(e,{...n,channel:t,guild:s})})}})}"
         }
@@ -7401,28 +6745,8 @@
     ],
     [
         {
-            "name": "getMemberSupplemental",
-            "code": "async function E(e,t){let n=await (0,u.fetchMemberSupplemental)(e,t);return 0===n.length?[]:(await r.default.dispatch({type:\"FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS\",guildId:e,memberSupplementals:n}),n)}"
-        },
-        {
             "name": "goToMemberSafetyDashboard",
             "code": "function p(e){let t=(0,o.canAccessMemberSafetyPage)(e),n=s.default.getGuild(e);return!!t&&null!=n&&(n.hasFeature(a.GuildFeatures.COMMUNITY)||n.hasFeature(a.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)?((0,l.transitionTo)(a.Routes.CHANNEL(e,c.StaticChannelRoute.MEMBER_SAFETY)),!0):(i.default.open(n.id,a.GuildSettingsSections.MEMBERS),!0))}"
-        },
-        {
-            "name": "initializeMemberSafetyStore",
-            "code": "async function d(e){await r.default.dispatch({type:\"INITIALIZE_MEMBER_SAFETY_STORE\",guildId:e})}"
-        },
-        {
-            "name": "refreshMemberSafetyTimestamp",
-            "code": "function f(e){r.default.dispatch({type:\"MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH\",guildId:e})}"
-        },
-        {
-            "name": "updateMemberSafetyTablePagination",
-            "code": "function S(e,t){let{continuationToken:n,...i}=t;r.default.dispatch({type:\"MEMBER_SAFETY_PAGINATION_UPDATE\",guildId:e,pagination:i})}"
-        },
-        {
-            "name": "updateSearchState",
-            "code": "async function g(e,t){await r.default.dispatch({type:\"MEMBER_SAFETY_SEARCH_STATE_UPDATE\",guildId:e,searchState:t})}"
         }
     ],
     [
@@ -7515,16 +6839,6 @@
         {
             "name": "default",
             "code": "function d(e){return(0,a.jsx)(s.default,{confettiLocation:o.ConfettiLocation.CALL_TILE,children:(0,a.jsx)(u,{...e})})}"
-        }
-    ],
-    [
-        {
-            "name": "updateClientCreatedAtOverride",
-            "code": "e=>{a.default.dispatch({type:\"SET_CREATED_AT_OVERRIDE\",createdAt:e})}"
-        },
-        {
-            "name": "updateClientPremiumTypeOverride",
-            "code": "(e,t)=>{a.default.dispatch({type:\"SET_PREMIUM_TYPE_OVERRIDE\",premiumType:e}),a.default.dispatch({type:\"UPDATE_CLIENT_PREMIUM_TYPE\",user:t})}"
         }
     ],
     [
@@ -7685,16 +6999,6 @@
     ],
     [
         {
-            "name": "completeSignUp",
-            "code": "function u(e){let{targetKey:t,dismissibleContent:n,data:u,completed:d}=e;null!=u.selectedOptionKey&&(!(0,s.isDismissibleContentDismissed)(n)&&l.default.track(r.AnalyticEvents.SIGNUP_COMPLETED,{target_key:t,selected_option_key:u.selectedOptionKey,email:u.email,guild_id:u.guildId,metadata:(0,i.extractMetadata)(u),completed:d}),(0,s.markDismissibleContentAsDismissed)(n,{dismissAction:o.ContentDismissActionType.PRIMARY,forceTrack:!0}),a.default.dispatch({type:\"COMPLETE_SIGN_UP\",email:u.email,targetKey:t,selectedOptionKey:u.selectedOptionKey}))}"
-        },
-        {
-            "name": "dismissSignUp",
-            "code": "function d(e,t){(0,s.markDismissibleContentAsDismissed)(t,{dismissAction:o.ContentDismissActionType.DISMISS,forceTrack:!0}),a.default.dispatch({type:\"DISMISS_SIGN_UP\",targetKey:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function c(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{shouldMergeGameSettings:s}=n.GameSettingsMergeExperiment.getCurrentConfig({location:\"navigator\"},{autoTrackExposure:!1});s?a.default.open(r.UserSettingsSections.GAMES,e,t):a.default.open(function(e){switch(e){case i.GameSettingsTab.MY_GAMES:return r.UserSettingsSections.REGISTERED_GAMES;case i.GameSettingsTab.CLIPS:return r.UserSettingsSections.CLIPS;case i.GameSettingsTab.OVERLAY:return r.UserSettingsSections.OVERLAY;case i.GameSettingsTab.ACTIVITY_PRIVACY:return r.UserSettingsSections.ACTIVITY_PRIVACY}}(e),null,t)}"
         }
@@ -7837,32 +7141,12 @@
     ],
     [
         {
-            "name": "fetchAllStoreListingsForApplication",
-            "code": "function c(t){return(0,u.httpGetWithCountryCodeQuery)({url:d.Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,query:{application_id:t},oldFormErrors:!0}).then(t=>(r.default.dispatch({type:\"STORE_LISTINGS_FETCH_SUCCESS\",storeListings:t.body.map(t=>({...t,published:!0}))}),t.body))}"
-        },
-        {
-            "name": "fetchStoreListingById",
-            "code": "function S(t){return(0,u.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_LISTING(t)).then(t=>{r.default.dispatch({type:\"STORE_LISTING_FETCH_SUCCESS\",storeListing:t.body})})}"
-        },
-        {
-            "name": "fetchStoreListingForApplication",
-            "code": "function p(t){return(0,u.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(t)).then(t=>{r.default.dispatch({type:\"STORE_LISTING_FETCH_SUCCESS\",storeListing:t.body})})}"
-        },
-        {
-            "name": "fetchStoreListingForSku",
-            "code": "function f(t){let e=s.default.get(t),n=null!=e&&(o.default.inTestModeForApplication(e.applicationId)||l.default.inDevModeForApplication(e.applicationId));return r.default.dispatch({type:\"SKU_FETCH_START\",skuId:t}),(0,u.httpGetWithCountryCodeQuery)(n?d.Endpoints.STORE_LISTINGS_SKU(t):d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t)).then(t=>{n?r.default.dispatch({type:\"STORE_LISTINGS_FETCH_SUCCESS\",storeListings:t.body}):r.default.dispatch({type:\"STORE_LISTING_FETCH_SUCCESS\",storeListing:t.body})}).catch(()=>{r.default.dispatch({type:\"SKU_FETCH_FAIL\",skuId:t})})}"
-        },
-        {
             "name": "goToSKUStoreListing",
             "code": "function _(t,e){let{pathname:n,...i}=(0,u.getStoreListingLocation)(t,e);(0,a.transitionTo)(n,i)}"
         },
         {
             "name": "joinPublishedStoreListingSkuGuild",
             "code": "function T(t){return i.HTTP.post({url:d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(t),oldFormErrors:!0})}"
-        },
-        {
-            "name": "matureAgree",
-            "code": "function m(){r.default.dispatch({type:\"APPLICATION_STORE_MATURE_AGREE\"})}"
         },
         {
             "name": "matureDisagree",
@@ -8029,16 +7313,6 @@
     ],
     [
         {
-            "name": "getTemplates",
-            "code": "async function r(e){let t=(await s.HTTP.get({url:n.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e)})).body;null!=t.templates&&l.default.dispatch({type:\"GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES\",templates:t.templates,guildId:e})}"
-        },
-        {
-            "name": "stashTemplateChannels",
-            "code": "function i(e,t){l.default.dispatch({type:\"GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS\",selectedTemplate:e,guildId:t})}"
-        }
-    ],
-    [
-        {
             "name": "getSavedMessageAndChannel",
             "code": "function c(e){var t,n,c;let f=o.default.getMessage(e.channelId,e.messageId),E=u.default.getUser(e.authorId),_=r.default.getChannel(e.channelId),m=null!=E?E:new i.default({id:e.authorId,username:e.authorSummary}),T=new l.default({id:e.messageId,channel_id:e.channelId,author:m,content:e.messageSummary}),I=null==e.guildId?new a.DMChannelRecord({id:e.channelId,type:s.ChannelTypes.DM,name:null!==(t=e.channelSummary)&&void 0!==t?t:\"\",guild_id:d.EMPTY_STRING_SNOWFLAKE_ID,recipients:[null!==(n=e.authorId)&&void 0!==n?n:d.EMPTY_STRING_SNOWFLAKE_ID]}):new a.GuildTextualChannelRecord({id:e.channelId,type:null==e.guildId?s.ChannelTypes.DM:s.ChannelTypes.GUILD_TEXT,name:null!==(c=e.channelSummary)&&void 0!==c?c:\"\",guild_id:e.guildId});return{channel:null!=_?_:I,message:null!=f?f:T}}"
         }
@@ -8059,16 +7333,8 @@
             "code": "function f(e,t,n){T(e,N.default.editedOnboardingPrompts.map(e=>e.id===t?{...e,...n}:e))}"
         },
         {
-            "name": "editGuildOnboardingPrompts",
-            "code": "function T(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2];if(l.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT\",prompts:t}),n){let n=t.map(n=>g(e,t,n));l.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS\",errors:n})}}"
-        },
-        {
             "name": "editOnboarding",
             "code": "async function A(e,t){await a.HTTP.put({url:_.Endpoints.GUILD_ONBOARDING(e),body:t})}"
-        },
-        {
-            "name": "resetGuildOnboardingPrompts",
-            "code": "function O(){l.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET\"})}"
         }
     ],
     [
@@ -8221,10 +7487,6 @@
         {
             "name": "clearAll",
             "code": "function l(){for(let e in i.default.all())n(e,!1)}"
-        },
-        {
-            "name": "toggle",
-            "code": "function n(e,t){let r=\"boolean\"==typeof t?t:!i.default.get(e);a.default.dispatch({type:\"DEV_TOOLS_DESIGN_TOGGLE_WEB_SET\",toggle:e,value:r})}"
         }
     ],
     [
@@ -8515,16 +7777,6 @@
     ],
     [
         {
-            "name": "updateStageMusicMuted",
-            "code": "function l(e){a.default.dispatch({type:\"STAGE_MUSIC_MUTE\",muted:e})}"
-        },
-        {
-            "name": "updateStageMusicShouldPlay",
-            "code": "function s(e){a.default.dispatch({type:\"STAGE_MUSIC_PLAY\",play:e})}"
-        }
-    ],
-    [
-        {
             "name": "shouldShowTextPlayground",
             "code": "function n(){return a.getCurrentConfig({location:\"26c832_1\"},{autoTrackExposure:!0}).showSetting}"
         }
@@ -8583,18 +7835,6 @@
             "code": "function E(e,t){return m(e,t*r.SEARCH_PAGE_SIZE)}"
         },
         {
-            "name": "clearHistory",
-            "code": "function T(e){s.default.dispatch({type:\"SEARCH_CLEAR_HISTORY\",searchId:e})}"
-        },
-        {
-            "name": "clearSearchState",
-            "code": "function p(e){a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED,{search_id:l.default.getAnalyticsId(e)}),s.default.wait(()=>s.default.dispatch({type:\"SEARCH_EDITOR_STATE_CLEAR\",searchId:e}))}"
-        },
-        {
-            "name": "search",
-            "code": "function o(e,t,n,o){(0,i.setIncludeNSFW)(t,e),o&&(t.search_everywhere=!0);let u=Object.keys(t);a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_STARTED,{search_type:l.default.getSearchType(),prev_search_id:l.default.getAnalyticsId(e),num_modifiers:u.length,modifiers:u.reduce((e,n)=>{let s=t[n];return e[n]=Array.isArray(s)?s.length:1,e},{})}),s.default.dispatch({type:\"SEARCH_START\",query:t,searchId:e,queryString:n,searchEverywhere:o})}"
-        },
-        {
             "name": "searchByMode",
             "code": "function d(e,t){let n=l.default.getQuery(e),s=function(e){switch(e){case r.SearchModes.MOST_RELEVANT:return{sort_by:\"relevance\",sort_order:\"desc\"};case r.SearchModes.OLDEST:return{sort_by:\"timestamp\",sort_order:\"asc\"};case r.SearchModes.NEWEST:default:return{sort_by:\"timestamp\",sort_order:\"desc\"}}}(t);return o(e,{...n,...s,offset:0})}"
         },
@@ -8609,18 +7849,6 @@
         {
             "name": "searchQueryParamsToSearchMode",
             "code": "function u(e){return\"relevance\"===e.sort_by?r.SearchModes.MOST_RELEVANT:\"asc\"===e.sort_order?r.SearchModes.OLDEST:r.SearchModes.NEWEST}"
-        },
-        {
-            "name": "setSearchState",
-            "code": "function I(e,t){null!=e&&s.default.dispatch({type:\"SEARCH_EDITOR_STATE_CHANGE\",searchId:e,editorState:t})}"
-        },
-        {
-            "name": "setShowBlockedResults",
-            "code": "function N(e,t){s.default.dispatch({type:\"SEARCH_SET_SHOW_BLOCKED_RESULTS\",searchId:e,showBlocked:t})}"
-        },
-        {
-            "name": "updateAutocompleteQuery",
-            "code": "function h(e,t,n){null!=e&&s.default.dispatch({type:\"SEARCH_AUTOCOMPLETE_QUERY_UPDATE\",searchId:e,tokens:t,cursorScope:n})}"
         }
     ],
     [
@@ -8853,12 +8081,6 @@
     ],
     [
         {
-            "name": "default",
-            "code": "function S(e){let{className:t,effect:i,onComplete:n,emojiSize:a=16}=e,o=l.useRef(null),u=a*f.ANIMATION_TO_EMOJI_RATIO,m=(u+a)/2;return l.useEffect(()=>{let e;if(null!=i)return!async function(){if(null!=o.current){let t=await T({effect:i});(e=d().loadAnimation({container:o.current,renderer:\"svg\",loop:!1,autoplay:!0,animationData:t})).addEventListener(\"complete\",()=>{null==n||n(),e.destroy()}),null!=i.channelId&&null!=i.messageId&&null!=i.emoji&&i.key===h.BurstReactionEffectSource.HOVER&&c.default.dispatch({type:\"BURST_REACTION_ANIMATION_ADD\",channelId:i.channelId,messageId:i.messageId,emoji:i.emoji,animation:e})}}(),()=>{null!=e&&e.destroy()}},[n,i,a]),(0,s.jsx)(\"div\",{className:g.effectsWrapper,children:(0,s.jsx)(\"div\",{className:r()(g.effect,t),style:{transform:\"translateY(\".concat(m,\"px)\"),height:u,width:u},ref:o})})}"
-        }
-    ],
-    [
-        {
             "name": "useMessageRequestRelativeTimestampText",
             "code": "function o(e){let t=(0,r.useMessageRequestPreview)(e),n=function(e){let{lastMessageId:t,message:n,loaded:a}=e;return a&&null!=n?i.default.extractTimestamp(n.id):null!=t?i.default.extractTimestamp(t):null}({lastMessageId:(0,a.useStateFromStores)([l.default],()=>l.default.lastMessageId(e.id)),...t});return null==n?\"\":(0,s.getTimestampString)(n)}"
         }
@@ -8873,24 +8095,6 @@
         {
             "name": "default",
             "code": "function D(e){var t;let{flaggedContent:i}=e,l=(0,s.useStateFromStores)([I.default],()=>I.default.getCurrentUser()),[c,d]=n.useState({}),[u,m]=n.useState(!0),A=i[0],E=F(A,c),p=(0,_.default)(E,{hideSimpleEmbedContent:!1,allowList:!1,allowHeading:!1,allowLinks:!1,previewLinkTarget:!1});return(n.useEffect(()=>{Promise.all(A.attachments.filter(e=>{let{filename:t}=e;return(0,r.isImageFile)(t)||(0,r.isVideoFile)(t)}).map(e=>{var t;return(t=e,new Promise((e,i)=>{if((0,r.isImageFile)(t.filename)){let a=new Image;a.src=t.url,a.onload=()=>{e(a)},a.onerror=()=>{i()}}else if((0,r.isVideoFile)(t.filename)){let a=document.createElement(\"video\");a.src=t.url,a.onloadedmetadata=()=>{let t=a.videoWidth;e({width:t,height:a.videoHeight})},a.onerror=()=>{i()}}else e({width:0,height:0})})).then(t=>d(i=>({...i,[e.id]:t})))})).finally(()=>m(!1))},[A.attachments]),\"\"===E.content&&0===E.attachments.length)?null:(0,a.jsx)(\"div\",{className:y.classificationEvidenceCard,children:u?(0,a.jsx)(o.Spinner,{}):(0,a.jsx)(T.default,{compact:!1,childrenHeader:(0,f.default)({author:{...l,colorString:\"\",nick:null!==(t=null==l?void 0:l.username)&&void 0!==t?t:\"\"},message:E,channel:void 0,guildId:void 0,compact:!1,animateAvatar:!1,isGroupStart:!0,roleIcon:void 0,hideTimestamp:!1}),childrenAccessories:(0,a.jsx)(M,{message:E}),childrenMessageContent:(0,h.default)({message:E},p.content),hasThread:!1,hasReply:!1})})}"
-        }
-    ],
-    [
-        {
-            "name": "close",
-            "code": "function i(){l.default.dispatch({type:\"GUILD_SETTINGS_VANITY_URL_CLOSE\"})}"
-        },
-        {
-            "name": "resetCode",
-            "code": "function r(){l.default.dispatch({type:\"GUILD_SETTINGS_VANITY_URL_RESET\"})}"
-        },
-        {
-            "name": "saveCode",
-            "code": "function d(e,t){return a.HTTP.patch({url:n.Endpoints.GUILD_VANITY_URL(e),body:{code:t},oldFormErrors:!0}).then(e=>{let{body:{code:t,uses:s}}=e;l.default.dispatch({type:\"GUILD_SETTINGS_SET_VANITY_URL\",code:t,uses:s})},e=>(l.default.dispatch({type:\"GUILD_SETTINGS_VANITY_URL_ERROR\",error:e.body}),e))}"
-        },
-        {
-            "name": "setCode",
-            "code": "function o(e){l.default.dispatch({type:\"GUILD_SETTINGS_VANITY_URL_SET\",code:e})}"
         }
     ],
     [
@@ -9411,12 +8615,6 @@
     ],
     [
         {
-            "name": "fetchStatisticsForApplication",
-            "code": "async function i(e){a.default.dispatch({type:\"APPLICATION_ACTIVITY_STATISTICS_FETCH_START\",applicationId:e});try{let t=(await n.HTTP.get({url:l.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),oldFormErrors:!0})).body;return a.default.dispatch({type:\"APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS\",statistics:t,applicationId:e}),t}catch(t){throw a.default.dispatch({type:\"APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL\",applicationId:e}),new r.default(t)}}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function f(e){let{guild:t,stageInstance:n,showGuildPopout:a,setShowGuildPopout:l,handleGuildNameClick:i,source:f,speakers:N,speakerCount:h,audienceCount:g,channelName:I}=e,m=t.id;return(0,s.jsx)(\"div\",{className:T.contentContainer,children:(0,s.jsxs)(\"div\",{className:T.headerContainer,children:[(0,s.jsxs)(\"div\",{className:T.guildInfoContainer,children:[(0,s.jsx)(u.default,{guildId:m,shouldShow:a,onRequestClose:()=>l(!1),children:()=>(0,s.jsxs)(d.Clickable,{className:T.flexContainerRow,onClick:i,children:[(0,s.jsx)(E.default,{guild:t,size:E.default.Sizes.MINI,className:T.guildIcon}),(0,s.jsxs)(\"div\",{className:T.flexContainerRow,children:[(0,s.jsx)(d.Text,{color:\"header-secondary\",variant:\"text-sm/normal\",className:r()(T.guildName,{[T.disabled]:null==i}),children:t.name}),(0,s.jsx)(c.default,{guild:t})]})]})}),(0,s.jsxs)(\"div\",{className:T.rightJustifiedContent,children:[6===f&&(0,s.jsx)(\"div\",{className:T.featuredTag,children:(0,s.jsx)(d.Text,{variant:\"text-sm/normal\",className:T.featuredTagText,children:\"Featured\"})}),(0,s.jsx)(S.default,{count:g,className:T.__invalid_audienceCount})]})]}),(0,s.jsx)(d.Text,{color:\"header-primary\",variant:\"text-lg/semibold\",className:T.topicText,children:n.topic}),(0,s.jsx)(d.Text,{color:\"header-secondary\",className:T.description,variant:\"text-sm/normal\",children:n.description}),(0,s.jsx)(o.default,{guild:t,speakers:N,speakerCount:h,className:T.speakers}),null!=I&&(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(\"hr\",{className:T.divider}),(0,s.jsxs)(\"div\",{className:T.footer,children:[(0,s.jsx)(_.default,{width:20,height:20,className:T.icon}),(0,s.jsx)(d.Text,{color:\"header-secondary\",className:T.__invalid_label,variant:\"text-sm/normal\",children:I})]})]})]})})}"
         }
@@ -9483,12 +8681,6 @@
     ],
     [
         {
-            "name": "updateGuildPremiumSubscriptionCount",
-            "code": "(e,t)=>{l.default.wait(()=>{l.default.dispatch({type:\"APPLIED_GUILD_BOOST_COUNT_UPDATE\",guildId:e,premiumCount:t})})}"
-        }
-    ],
-    [
-        {
             "name": "createStyling",
             "code": "function e(){for(var t=arguments.length,r=Array(t),a=t,n=z(e);a--;)r[a]=arguments[a];var s=t<3&&r[0]!==n&&r[t-1]!==n?[]:j(r,n);return(t-=s.length)<p?q(d,h,L,e.placeholder,void 0,r,s,void 0,void 0,p-t):E(this&&this!==k&&this instanceof e?g:d,this,r)}"
         },
@@ -9501,12 +8693,6 @@
         {
             "name": "useExplicitMediaActions",
             "code": "function l(e){let{onError:t,onSuccess:n,report:l}=e,[i,r]=s.useState(!1);return{reportFalsePositive:s.useCallback(async()=>{if(!i){r(!0);try{await l(),null==n||n()}catch(n){let e=new a.APIError(n);null==t||t(e)}finally{r(!1)}}},[i,t,n,l]),isReportFalsePositiveLoading:i}}"
-        }
-    ],
-    [
-        {
-            "name": "fetchEULA",
-            "code": "async function u(e){let t=await r.HTTP.get({url:a.Endpoints.STORE_EULA(e),oldFormErrors:!0});n.default.dispatch({type:\"EULA_FETCH_SUCCESS\",eula:t.body})}"
         }
     ],
     [
@@ -9543,12 +8729,6 @@
         {
             "name": "QuestsEntryContextMenuPopout",
             "code": "function A(e){let{children:t,onOpen:n,onClose:l,preventIdle:i,quest:r,questContent:u,questContentPosition:d,...c}=e,_=a.useCallback(()=>{(0,E.trackQuestContentClicked)({questId:r.id,questContent:u,questContentCTA:E.QuestContentCTA.OPEN_CONTEXT_MENU,questContentPosition:d}),null!=n&&n()},[n,r.id,u,d]);return(0,s.jsx)(o.Popout,{onRequestOpen:_,onRequestClose:l,renderPopout:e=>{let{closePopout:t}=e;return i?(0,s.jsx)(f.default,{children:(0,s.jsx)(g,{...c,quest:r,questContent:u,questContentPosition:d,onClose:t})}):(0,s.jsx)(g,{...c,quest:r,questContent:u,questContentPosition:d,onClose:t})},animation:o.Popout.Animation.NONE,children:e=>t(e)})}"
-        }
-    ],
-    [
-        {
-            "name": "bulkClearRecents",
-            "code": "async function n(e,t){await (0,T.updateUserGuildSettings)(e,e=>(e.guildRecentsDismissedAt=s.Timestamp.fromDate(new Date),!0),T.UserSettingsDelay.INFREQUENT_USER_ACTION),_.default.dispatch({type:\"BULK_CLEAR_RECENTS\",guildId:e,channelIds:t}),a.default.track(A.AnalyticEvents.CHANNEL_LIST_UPDATED,{action_type:\"recents_dismissed\"})}"
         }
     ],
     [
@@ -10071,12 +9251,6 @@
     ],
     [
         {
-            "name": "handleBlockedByProxy",
-            "code": "function i(){d.default.dispatch({type:\"PROXY_BLOCKED_REQUEST\"})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function s(e){let{enabled:t}=a.QuestHomeExperiment.useExperiment({location:e},{autoTrackExposure:!1});return t}"
         }
@@ -10113,16 +9287,6 @@
     ],
     [
         {
-            "name": "markSectionAcknowledged",
-            "code": "function C(e){a.default.dispatch({type:\"ACTIVITIES_WHATS_NEW_ACKNOWLEDGE_SECTION\",section:e})}"
-        },
-        {
-            "name": "markSectionOpened",
-            "code": "function s(e){a.default.dispatch({type:\"ACTIVITIES_WHATS_NEW_MARK_OPENED_SECTION\",section:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function i(e){return(0,a.default)(e,n)}"
         }
@@ -10143,12 +9307,6 @@
         {
             "name": "useNewOwnerOnboardingRequired",
             "code": "function d(e){let t=(null==e?void 0:e.hasFeature(o.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING))===!0,d=(null==e?void 0:e.hasFeature(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))===!0,u=(0,n.useStateFromStores)([r.default],()=>r.default.getCurrentUser()),c=(null==e?void 0:e.isOwner(u))===!0;l.useEffect(()=>{null!=e&&t&&c&&(0,i.openModalLazy)(async()=>{let{default:t}=await Promise.all([s.e(\"99387\"),s.e(\"710\")]).then(s.bind(s,\"32342\"));return s=>(0,a.jsx)(t,{...s,guildId:e.id,requireTeamSetup:d})})},[t,d,e,c])}"
-        }
-    ],
-    [
-        {
-            "name": "setSoundpack",
-            "code": "function r(e){n.default.track(l.AnalyticEvents.SOUNDPACK_UPDATED,{soundpack:e,previous_soundpack:i.default.getSoundpack()}),a.default.dispatch({type:\"SET_SOUNDPACK\",soundpack:e})}"
         }
     ],
     [
@@ -10581,16 +9739,6 @@
     ],
     [
         {
-            "name": "resetDefaultChannels",
-            "code": "function T(){a.default.dispatch({type:\"GUILD_SETTINGS_DEFAULT_CHANNELS_RESET\"})}"
-        },
-        {
-            "name": "toggleDefaultChannel",
-            "code": "function S(e){a.default.dispatch({type:\"GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE\",channelId:e})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function f(e,t,n){let l=a.useRef((0,i.v4)()),s=a.useRef(new r.Interval),f=a.useCallback(a=>{a.lastUpdatedAt=Date.now(),(0,o.updateEmojiHose)(a,e,n),(0,o.startEmojiHose)(t,n,a)},[t,n,e]),h=a.useCallback((a,r,c)=>{l.current=(0,i.v4)();let h={...a,id:l.current,x:r,y:c,userId:e,state:u.EmojiHoseState.START,lastUpdatedAt:Date.now()};(0,o.startEmojiHose)(t,n,h),(0,o.updateEmojiHose)(h,e,n),s.current.start(d.EMOJI_HOSE_PING_DELAY,()=>f(h))},[e,t,n,f]),m=a.useCallback((a,i,r)=>{let h={...a,id:l.current,x:i,y:r,userId:e,state:u.EmojiHoseState.START,lastUpdatedAt:Date.now()};c(t,n,h),(0,o.updateEmojiHose)(h,e,n),s.current.start(d.EMOJI_HOSE_PING_DELAY,()=>f(h))},[e,t,n,f]),p=a.useCallback((a,i,r)=>{c.cancel(),(0,o.stopEmojiHose)(t,n,l.current),(0,o.updateEmojiHose)({...a,id:l.current,x:i,y:r,userId:e,state:u.EmojiHoseState.STOP,lastUpdatedAt:Date.now()},e,n),s.current.stop()},[t,n,e]),E=a.useCallback((e,t,n)=>m(e,t,n),[m]);return a.useMemo(()=>({handleMouseDown:h,handleMouseMove:m,handleMouseUp:p,handleMouseEnter:E}),[h,E,m,p])}"
         }
@@ -10733,24 +9881,6 @@
     ],
     [
         {
-            "name": "closeAgeGateModal",
-            "code": "function o(e){n.default.wait(()=>n.default.dispatch({type:\"AGE_GATE_MODAL_CLOSE\"})),void 0!==e&&a.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:e,action:l.AgeGateAnalyticAction.AGE_GATE_CLOSE})}"
-        },
-        {
-            "name": "openAgeGateModal",
-            "code": "function r(e){a.default.track(i.AnalyticEvents.OPEN_MODAL,{type:\"Enter Your Birthday\",source:{section:e}}),n.default.dispatch({type:\"AGE_GATE_MODAL_OPEN\",source:e})}"
-        },
-        {
-            "name": "openFailureAgeGateModal",
-            "code": "function d(e,t){n.default.wait(()=>{n.default.dispatch({type:\"AGE_GATE_FAILURE_MODAL_OPEN\",underageMessage:t})}),a.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:e,action:l.AgeGateAnalyticAction.AGE_GATE_FAILURE})}"
-        },
-        {
-            "name": "openSuccessAgeGateModal",
-            "code": "function u(e){n.default.wait(()=>{n.default.dispatch({type:\"AGE_GATE_SUCCESS_MODAL_OPEN\"})}),a.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:e,action:l.AgeGateAnalyticAction.AGE_GATE_SUCCESS})}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "function r(n){let{className:t,color:i,...o}=n;return(0,u.jsx)(l.Text,{className:e()({[d.text]:null==i},t),color:i,...o})}"
         }
@@ -10785,48 +9915,6 @@
         {
             "name": "default",
             "code": "function r(e){let{filename:l,className:t,filters:i,buttonText:r,placeholder:c,onFileSelect:m}=e,I=s.useRef(null);return(0,a.jsxs)(\"div\",{className:n()(t,d.fileUpload),children:[(0,a.jsx)(\"input\",{className:d.fileUploadInput,tabIndex:-1,readOnly:!0,placeholder:c,type:\"text\",value:l}),(0,a.jsxs)(o.Button,{size:o.Button.Sizes.MIN,className:d.fileUploadButton,children:[r,(0,a.jsx)(u.default,{ref:I,tabIndex:-1,onChange:e=>{var l;m(null===(l=e.currentTarget.files)||void 0===l?void 0:l[0])},multiple:!1,filters:i})]})]})}"
-        }
-    ],
-    [
-        {
-            "name": "clearRolePermissions",
-            "code": "function c(e){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS\",id:e})}"
-        },
-        {
-            "name": "init",
-            "code": "function l(){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_INIT\"})}"
-        },
-        {
-            "name": "saveRoleSettings",
-            "code": "async function S(e,t,n,o,l){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_SUBMITTING\"});try{let s=async()=>{if(null==t||0===t.length)return;let n=t.pop();if(null==n||\"\"===n.name)return s();await a.default.updateRole(e,n.id,{name:n.name,description:n.description,permissions:n.permissions,color:n.color,hoist:n.hoist,mentionable:n.mentionable,icon:n.icon,unicodeEmoji:n.unicodeEmoji}).then(s,s)};if(null!=n&&n.length>0?await a.default.batchRoleUpdate(e,n).then(s,s):await s(),null!=l&&null!=o)for await(let t of o){let n=l.get(t);await (0,i.putRoleConnectionsConfigurations)(e,t,null!=n?n:[])}}catch(e){var r,c;s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_SAVE_FAIL\",message:null!==(c=null===(r=e.body)||void 0===r?void 0:r.message)&&void 0!==c?c:Object.values(e.body)[0]});return}s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_SAVE_SUCCESS\"})}"
-        },
-        {
-            "name": "toggleRoleSettings",
-            "code": "function _(e,t,n){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_SETTINGS\",id:e,hoist:t,mentionable:n})}"
-        },
-        {
-            "name": "updateRoleColor",
-            "code": "function u(e,t){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_COLOR\",id:e,color:t})}"
-        },
-        {
-            "name": "updateRoleConnectionConfigurations",
-            "code": "function I(e,t){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS\",roleId:e,roleConnectionConfigurations:t})}"
-        },
-        {
-            "name": "updateRoleIcon",
-            "code": "function E(e,t,n){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON\",id:e,icon:t,unicodeEmoji:n})}"
-        },
-        {
-            "name": "updateRoleName",
-            "code": "function d(e,t){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_NAME\",id:e,name:t})}"
-        },
-        {
-            "name": "updateRolePermissions",
-            "code": "function r(e,t,n){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS\",id:e,flag:t,allow:n})}"
-        },
-        {
-            "name": "updateRoleSort",
-            "code": "function o(e){s.default.dispatch({type:\"GUILD_SETTINGS_ROLES_SORT_UPDATE\",roles:e})}"
         }
     ],
     [
@@ -10899,20 +9987,6 @@
         {
             "name": "useGuildAccessRateInsightExperiment",
             "code": "function r(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return l.useEffect(()=>{!t&&null!=e&&d.trackExposure({guildId:e,location:\"77b4b2_2\"})},[e,t]),d.useExperiment({guildId:null!=e?e:s.EMPTY_STRING_SNOWFLAKE_ID,location:\"77b4b2_3\"},{autoTrackExposure:!1,disable:t||null==e})}"
-        }
-    ],
-    [
-        {
-            "name": "logoutUnderageNewUser",
-            "code": "function d(e){n.default.dispatch({type:\"AGE_GATE_LOGOUT_UNDERAGE_NEW_USER\"}),r.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:e,action:o.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER})}"
-        },
-        {
-            "name": "preventUnderageRegistration",
-            "code": "function u(e){n.default.dispatch({type:\"AGE_GATE_PREVENT_UNDERAGE_REGISTRATION\"}),r.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:e,action:o.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION})}"
-        },
-        {
-            "name": "submitDateOfBirth",
-            "code": "function c(e,t){return(0,l.default)(e,t),r.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:t,action:o.AgeGateAnalyticAction.AGE_GATE_SUBMITTED}),a.HTTP.patch({url:i.Endpoints.ME,oldFormErrors:!0,body:{date_of_birth:e.format(\"YYYY-MM-DD\")}}).then(e=>{let s=e.body;n.default.dispatch({type:\"CURRENT_USER_UPDATE\",user:s}),r.default.track(i.AnalyticEvents.AGE_GATE_ACTION,{source:t,action:o.AgeGateAnalyticAction.AGE_GATE_SUCCESS})})}"
         }
     ],
     [
@@ -11069,12 +10143,6 @@
     ],
     [
         {
-            "name": "markView",
-            "code": "function s(e){a.default.dispatch({type:\"VIEW_HISTORY_MARK_VIEW\",key:e})}"
-        }
-    ],
-    [
-        {
             "name": "useAgeSpecificText",
             "code": "(e,t)=>(0,n.default)()?t:e"
         }
@@ -11119,28 +10187,8 @@
     ],
     [
         {
-            "name": "close",
-            "code": "function c(){a.default.dispatch({type:\"CHANNEL_SETTINGS_CLOSE\"})}"
-        },
-        {
             "name": "deleteChannel",
             "code": "function N(e){let t=r.default.getChannel(e);l.HTTP.del({url:s.Endpoints.CHANNEL(e),oldFormErrors:!0}).then(()=>{let e=null==t?void 0:t.getGuildId();null!=e&&!(null==t?void 0:t.isThread())&&i.default.checkGuildTemplateDirty(e),c()})}"
-        },
-        {
-            "name": "init",
-            "code": "function d(e,t,n){a.default.dispatch({type:\"CHANNEL_SETTINGS_INIT\",channelId:e,location:t,subsection:n})}"
-        },
-        {
-            "name": "saveChannel",
-            "code": "async function f(e,t){let{name:n,type:o,position:d,topic:c,bitrate:_,userLimit:E,nsfw:f,flags:N,permissionOverwrites:S,rateLimitPerUser:T,defaultThreadRateLimitPerUser:C,defaultAutoArchiveDuration:h,template:m,defaultReactionEmoji:I,rtcRegion:p,videoQualityMode:A,autoArchiveDuration:L,locked:v,invitable:g,availableTags:y,defaultSortOrder:O,defaultForumLayout:G,iconEmoji:M,themeColor:H}=t,U=r.default.getChannel(e);return a.default.dispatch({type:\"CHANNEL_SETTINGS_SUBMIT\"}),await u.default.unarchiveThreadIfNecessary(e),l.HTTP.patch({url:s.Endpoints.CHANNEL(e),body:{name:n,type:o,position:d,topic:c,bitrate:_,user_limit:E,nsfw:f,flags:N,permission_overwrites:S,rate_limit_per_user:T,default_thread_rate_limit_per_user:C,default_auto_archive_duration:h,template:m,rtc_region:p,video_quality_mode:A,auto_archive_duration:L,locked:v,invitable:g,default_reaction_emoji:null!=I?{emoji_id:null==I?void 0:I.emojiId,emoji_name:null==I?void 0:I.emojiName}:null===I?null:void 0,available_tags:null==y?void 0:y.map(e=>({id:e.id,name:e.name,emoji_id:e.emojiId,emoji_name:e.emojiName,moderated:e.moderated})),default_sort_order:O,default_forum_layout:G,icon_emoji:null!=M?{id:M.id,name:M.name}:null===M?null:void 0,theme_color:H},oldFormErrors:!0}).then(t=>{a.default.dispatch({type:\"CHANNEL_SETTINGS_SUBMIT_SUCCESS\",channelId:e});let n=null==U?void 0:U.getGuildId();return null!=n&&!(null==U?void 0:U.isThread())&&i.default.checkGuildTemplateDirty(n),t},e=>(a.default.dispatch({type:\"CHANNEL_SETTINGS_SUBMIT_FAILURE\",errors:e.body}),e))}"
-        },
-        {
-            "name": "setSection",
-            "code": "function _(e){a.default.dispatch({type:\"CHANNEL_SETTINGS_SET_SECTION\",section:e})}"
-        },
-        {
-            "name": "updateChannel",
-            "code": "function E(e){let{name:t,type:n,topic:l,bitrate:i,userLimit:u,nsfw:r,flags:o,rateLimitPerUser:s,defaultThreadRateLimitPerUser:d,defaultAutoArchiveDuration:c,template:_,defaultReactionEmoji:E,rtcRegion:f,videoQualityMode:N,autoArchiveDuration:S,locked:T,invitable:C,availableTags:h,defaultSortOrder:m,defaultForumLayout:I,iconEmoji:p,themeColor:A}=e;a.default.dispatch({type:\"CHANNEL_SETTINGS_UPDATE\",name:t,channelType:n,topic:l,bitrate:i,userLimit:u,nsfw:r,flags:o,rateLimitPerUser:s,defaultThreadRateLimitPerUser:d,defaultAutoArchiveDuration:c,template:_,defaultReactionEmoji:E,rtcRegion:f,videoQualityMode:N,autoArchiveDuration:S,locked:T,invitable:C,availableTags:h,defaultSortOrder:m,defaultForumLayout:I,iconEmoji:p,themeColor:A})}"
         }
     ],
     [
@@ -11487,20 +10535,8 @@
     ],
     [
         {
-            "name": "clearIntegrationPermissions",
-            "code": "function d(){a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_CLEAR\"})}"
-        },
-        {
             "name": "editPermissions",
             "code": "function s(t,e,n){a.default.dispatch({applicationId:t,commandId:e,permissions:n,type:\"INTEGRATION_PERMISSION_SETTINGS_EDIT\"})}"
-        },
-        {
-            "name": "getApplicationCommandPermissions",
-            "code": "async function E(t,e,n){let r=[];try{let a=await i.HTTP.get(o.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(t,e,n));a.ok&&(r=a.body.permissions)}catch(i){if(404!==i.status){a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE\",applicationId:t,commandId:n,guildId:e});return}}a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE\",applicationId:t,commandId:n,guildId:e,permissions:r})}"
-        },
-        {
-            "name": "getApplicationCommands",
-            "code": "function T(t,e){i.HTTP.get(o.Endpoints.GUILD_COMMANDS_FOR_APPLICATION(t,e)).then(n=>{a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS\",applicationId:e,commands:n.body.application_commands,guildId:t,permissions:n.body.permissions})},()=>{a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE\",applicationId:e})})}"
         },
         {
             "name": "initIntegrationPermissions",
@@ -11509,10 +10545,6 @@
         {
             "name": "resetPermissions",
             "code": "function I(t){a.default.dispatch({commandId:t,type:\"INTEGRATION_PERMISSION_SETTINGS_RESET\"})}"
-        },
-        {
-            "name": "updateApplicationCommandPermissions",
-            "code": "async function c(t){let{applicationId:e,commandId:n,defaultEveryoneValue:i,defaultEverywhereValue:o,guildId:d,permissions:s}=t,T=n===e?function(t,e,n,i){if(!n||!i)return e;let a={[t]:n,[(0,u.allChannelsSentinel)(t)]:i};return e.filter(t=>{let e=a[t.id];return null==e||t.permission!==e})}(d,s,i,o):s,E=await r.updateApplicationGuildCommandPermissions(e,d,n,T);E.ok&&a.default.dispatch({type:\"INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE\",applicationId:e,commandId:n,guildId:d,permissions:E.body.permissions})}"
         }
     ],
     [
@@ -11542,10 +10574,6 @@
         }
     ],
     [
-        {
-            "name": "acceptMessageRequest",
-            "code": "async function u(e){await i.HTTP.put({url:a.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),body:{consent_status:d.MessageRequestConsentStatusTypes.ACCEPTED}}),n.default.dispatch({type:\"MESSAGE_REQUEST_ACCEPT_OPTIMISTIC\",channelId:e})}"
-        },
         {
             "name": "clearMessageRequestState",
             "code": "function l(e){return i.HTTP.put({url:a.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),body:{consent_status:d.MessageRequestConsentStatusTypes.UNSPECIFIED}})}"
@@ -11659,12 +10687,6 @@
     ],
     [
         {
-            "name": "fetchActivityStatistics",
-            "code": "async function u(){let e=l.default.lastFetched;if(!(null!=e&&Date.now()-e<o))try{let e=await n.HTTP.get({url:r.Endpoints.USER_ACTIVITY_STATISTICS,oldFormErrors:!0});a.default.dispatch({type:\"USER_ACTIVITY_STATISTICS_FETCH_SUCCESS\",statistics:e.body})}catch(e){return e}}"
-        }
-    ],
-    [
-        {
             "name": "useIsChecked",
             "code": "function u(e,t){return(0,a.useStateFromStores)([r.default],()=>r.default.editedDefaultChannelIds.has(e)||null!=t&&r.default.editedDefaultChannelIds.has(t))}"
         },
@@ -11739,46 +10761,12 @@
         {
             "name": "markAsInappropriateConversation",
             "code": "function l(t,n){return i.HTTP.post({url:a.Endpoints.ADD_SAFETY_WARNING(t),body:{safety_warning_type:n}})}"
-        },
-        {
-            "name": "pauseVibingWumpusMusic",
-            "code": "function o(){s.default.dispatch({type:\"VIBING_WUMPUS_PAUSE_MUSIC\"})}"
-        },
-        {
-            "name": "playVibingWumpusMusic",
-            "code": "function u(){s.default.dispatch({type:\"VIBING_WUMPUS_PLAY_MUSIC\"})}"
-        },
-        {
-            "name": "stopVibingWumpusMusic",
-            "code": "function r(){s.default.dispatch({type:\"VIBING_WUMPUS_STOP_MUSIC\"})}"
         }
     ],
     [
         {
             "name": "StreamTileIndicators",
             "code": "function B(e){let{participant:t,selected:n,focused:l,idle:s,width:i,premiumIndicator:o}=e,u=(0,r.useStateFromStores)([S.default],()=>S.default.getActiveStreamForUser(t.user.id,t.stream.guildId)),d=(0,b.isVideoCompact)(i);return(0,a.jsxs)(a.Fragment,{children:[n?null:(0,a.jsx)(D.default,{participant:t}),l||null==u||u.state===U.ApplicationStreamStates.ENDED||u.state===U.ApplicationStreamStates.FAILED?null:(0,a.jsx)(E.default,{size:N.default.Sizes.SMALL,className:H.liveIndicator,participant:t,showQuality:!d&&!s,isUpsellEnabled:!1,premiumIndicator:o})]})}"
-        }
-    ],
-    [
-        {
-            "name": "deleteNotificationCenterItem",
-            "code": "async function I(e){let t=r.NotificationCenterAckedBeforeId.getSetting();try{i.default.dispatch({type:\"NOTIFICATION_CENTER_ITEM_DELETE\",id:e.id}),await o.default.delete({url:c.Endpoints.NOTIF_CENTER_ITEMS(e.id),body:{item_type:(0,d.isMentionItem)(e)?\"mention\":\"regular\"},trackedActionData:{event:s.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,properties:{notification_center_id:e.id,acked:(0,d.isRemoteAcked)(e,t),item_type:e.type}}})}catch(t){throw i.default.dispatch({type:\"NOTIFICATION_CENTER_ITEM_DELETE_FAILURE\",item:e}),t}}"
-        },
-        {
-            "name": "fetchNotificationCenterItems",
-            "code": "async function _(e,t){if(u.default.loading)return;await i.default.dispatch({type:\"LOAD_NOTIFICATION_CENTER_ITEMS\"});let n=Math.ceil(u.default.items.length/e.limit);try{let a=await o.default.get({url:c.Endpoints.NOTIF_CENTER_ITEMS(),trackedActionData:{event:s.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,properties:e=>{var t;let s=((null===(t=e.body)||void 0===t?void 0:t.items)||[]).map(e=>e.type);return(0,l.exact)({page:n,items:s,item_count:s.length})}},query:{...e}});null==t||t(),await i.default.dispatch({type:\"LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS\",items:a.body.items,cursor:a.body.cursor,hasMore:a.body.has_more})}catch(e){null==t||t(),await i.default.dispatch({type:\"LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE\"})}}"
-        },
-        {
-            "name": "markNotificationCenterItemAcked",
-            "code": "function m(e){null!=e.local_id?function(e){i.default.dispatch({type:\"NOTIFICATION_CENTER_ITEMS_LOCAL_ACK\",localIds:e})}([e.local_id]):(0,d.isMentionItem)(e)?function(e){i.default.dispatch({type:\"NOTIFICATION_CENTER_ITEMS_ACK\",optimistic:!0,ids:[e]})}(e.id):T(e.id)}"
-        },
-        {
-            "name": "resetNotificationCenter",
-            "code": "function E(){i.default.dispatch({type:\"RESET_NOTIFICATION_CENTER\"})}"
-        },
-        {
-            "name": "setNotificationCenterActive",
-            "code": "function f(e){i.default.dispatch({type:\"NOTIFICATION_CENTER_SET_ACTIVE\",active:e})}"
         }
     ],
     [
@@ -11887,20 +10875,6 @@
         {
             "name": "default",
             "code": "()=>{let e=(0,n.useStateFromStores)([i.default],()=>i.default.getSelectedTab());return{selectedTab:e,handleTabChange:e=>{l.default.selectTab(e),a.default.track(o.AnalyticEvents.FAMILY_CENTER_ACTION,{action:r.FamilyCenterAction.TabChange,tab:e})}}}"
-        }
-    ],
-    [
-        {
-            "name": "ignoreDevice",
-            "code": "function i(e){a.default.dispatch({type:\"CONNECTED_DEVICE_IGNORE\",displayName:e})}"
-        },
-        {
-            "name": "neverShowModal",
-            "code": "function d(){a.default.dispatch({type:\"CONNECTED_DEVICE_NEVER_SHOW_MODAL\"})}"
-        },
-        {
-            "name": "setDevice",
-            "code": "function s(e,t,n){a.default.dispatch({type:\"CONNECTED_DEVICE_SET\",displayName:e,connectedDevicePreference:t,location:n})}"
         }
     ],
     [
@@ -12827,21 +11801,11 @@
     ],
     [
         {
-            "name": "default",
-            "code": "function x(e){let t=(0,i.useStateFromStores)([f.default],()=>{var t;return null!==(t=f.default.getPendingResponseOptions(e))&&void 0!==t?t:N},[e]);return n.useEffect(()=>(C(e),()=>C(e)),[e]),n.useEffect(()=>{null!=t&&0!==Object.keys(t).length&&h.default.updateOnboardingResponses(e)},[e,t]),{handleSelectOption:n.useCallback((t,l,n)=>{let a=f.default.getOnboardingResponses(e),{addedRoleIds:i,removedRoleIds:C}=function(e,t,l,n){var a,i,r,d,o;let u=[],h=[];if(e.singleSelect&&l){let l=e.options.find(e=>n.includes(e.id));u=s().difference(null!==(a=t.roleIds)&&void 0!==a?a:[],null!==(i=null==l?void 0:l.roleIds)&&void 0!==i?i:[]),h=s().difference(null!==(r=null==l?void 0:l.roleIds)&&void 0!==r?r:[],null!==(d=t.roleIds)&&void 0!==d?d:[])}else if(l)u=null!==(o=t.roleIds)&&void 0!==o?o:[],h=[];else{let l=e.options.filter(e=>n.includes(e.id)),a=l.filter(e=>t.id!==e.id),i=l.map(e=>e.roleIds).flat().filter(c.isNotNullish),r=a.map(e=>e.roleIds).flat().filter(c.isNotNullish);u=[],h=s().difference(i,r)}return{addedRoleIds:u,removedRoleIds:h}}(t,l,n,a),{addedChannelIds:N,removedChannelIds:x}=function(e){var t,l,n,a,i;let{guildId:r,prompt:o,option:u,selected:h,responses:m}=e,C=[],N=[];if(o.singleSelect&&h){let e=o.options.find(e=>m.includes(e.id));C=s().difference(null!==(t=u.channelIds)&&void 0!==t?t:[],null!==(l=null==e?void 0:e.channelIds)&&void 0!==l?l:[]),N=s().difference(null!==(n=null==e?void 0:e.channelIds)&&void 0!==n?n:[],null!==(a=u.channelIds)&&void 0!==a?a:[])}else if(h)C=null!==(i=u.channelIds)&&void 0!==i?i:[],N=[];else{let e=o.options.filter(e=>m.includes(e.id)),t=e.filter(e=>u.id!==e.id),l=e.map(e=>e.channelIds).flat().filter(c.isNotNullish),n=t.map(e=>e.channelIds).flat().filter(c.isNotNullish);C=[],N=s().difference(l,n)}return(0,d.hasNotSetUpChannelOptIn)(r)&&C.push(...f.default.getDefaultChannelIds(r)),{addedChannelIds:C,removedChannelIds:N}}({guildId:e,prompt:t,option:l,selected:n,responses:a}),g=N.reduce((t,l)=>{let n=o.default.getChannelIdFlags(e,l);return t[l]={flags:(0,u.setFlag)(n,m.ChannelNotificationSettingsFlags.OPT_IN_ENABLED,!0)},t},{}),p=x.reduce((t,l)=>{let n=o.default.getChannelIdFlags(e,l);return t[l]={flags:(0,u.setFlag)(n,m.ChannelNotificationSettingsFlags.OPT_IN_ENABLED,!1)},t},{}),S={...g,...p};h.default.selectOption(e,t.id,l.id,n),r.default.dispatch({type:\"USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK\",guildId:e,overrides:S}),h.default.updateRolesLocal(e,i,C)},[e])}}"
-        }
-    ],
-    [
-        {
             "name": "Banner",
             "code": "function a(e){let{title:t,subtitle:n,iconSrc:a,backgroundSrc:o,animatedBackgroundSrc:u,prefersReducedMotion:d=!0}=e,c=r.useMemo(()=>{let e=null!=o?o:a;if(null!=e)return{\"--custom-background-url\":\"url(\".concat(e.toString(),\")\")}},[o,a]),p=r.useMemo(()=>{if(null==o)return;let e={\"--custom-background-static\":\"url(\".concat(o.toString())};return!d&&null!=u&&(e[\"--custom-background-animated\"]=\"url(\".concat(u.toString(),\")\")),e},[u,o,d]);return(0,i.jsxs)(\"div\",{className:s.wrapper,children:[(0,i.jsx)(\"div\",{className:s.background,style:c}),(0,i.jsxs)(\"div\",{className:s.content,children:[null!=a&&(0,i.jsx)(\"div\",{className:s.icon,children:(0,i.jsx)(\"img\",{src:a.toString(),alt:\"\"})}),(0,i.jsxs)(\"div\",{children:[(0,i.jsx)(l.Text,{variant:\"heading-xl/bold\",tag:\"div\",children:t}),null!=n&&(0,i.jsxs)(l.Text,{variant:\"text-sm/normal\",children:[\"“\",n,\"”\"]})]})]}),null!=o?(0,i.jsx)(\"div\",{className:s.image,style:p}):null]})}"
         }
     ],
     [
-        {
-            "name": "dispatchOverlayWidgetChanged",
-            "code": "function o(e,t){var n,s;let o=l(e),r=a.default.getGame();i.default.dispatch({type:\"OVERLAY_WIDGET_CHANGED\",gameName:null!==(n=null==r?void 0:r.name)&&void 0!==n?n:null,gameId:null!==(s=null==r?void 0:r.id)&&void 0!==s?s:null,widgetType:e.widget,visible:o&&t,locked:e.locked,pinned:e.pinned})}"
-        },
         {
             "name": "dispatchOverlayWidgetIfChanged",
             "code": "function s(e,t,n){(e.locked!==t.locked||e.pinned!==t.pinned||n(e)!==n(t)||l(e)!==l(t))&&o(t,n(t))}"
@@ -13217,24 +12181,8 @@
     ],
     [
         {
-            "name": "setNewUser",
-            "code": "function s(e){a.default.wait(()=>a.default.dispatch({type:\"NUF_NEW_USER\",newUserType:e}))}"
-        },
-        {
-            "name": "setNewUserFlowCompleted",
-            "code": "function l(){a.default.wait(()=>a.default.dispatch({type:\"NUF_COMPLETE\"}))}"
-        }
-    ],
-    [
-        {
             "name": "openGiftCodeAcceptModal",
             "code": "function f(e){let{processedCode:t,channelContext:f,customGiftMessage:E,giftInfo:_}=e,m=!1,T=null,I=l.default.getCurrentUser(),p=(0,o.isPremiumAtLeast)(null==I?void 0:I.premiumType,d.PremiumTypes.TIER_0);(0,a.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e(\"99387\"),n.e(\"92446\"),n.e(\"72760\")]).then(n.bind(n,\"409858\"));return n=>{var a,l;return(0,s.jsx)(e,{code:t,channelContext:f,customGiftMessage:E,emojiName:null==_?void 0:null===(a=_.emoji)||void 0===a?void 0:a.name,soundId:null==_?void 0:null===(l=_.sound)||void 0===l?void 0:l.id,onComplete:(e,t)=>{T=e,t&&(m=t,e.isSubscription&&null==i.default.getPremiumSubscription(!1)&&(0,u.setCanPlayWowMoment)(!0))},...n})}},{onCloseCallback:()=>{var e;m&&null!=T&&!p&&T.isSubscription&&(null==T?void 0:null===(e=T.subscriptionPlan)||void 0===e?void 0:e.premiumSubscriptionType)===d.PremiumTypes.TIER_2&&r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)}})}"
-        }
-    ],
-    [
-        {
-            "name": "updateLocation",
-            "code": "function a(e){n.default.wait(()=>n.default.dispatch({type:\"APPLICATION_STORE_LOCATION_CHANGE\",location:e}))}"
         }
     ],
     [
@@ -13483,20 +12431,6 @@
     ],
     [
         {
-            "name": "hideEnablePublicGuildUpsellNotice",
-            "code": "function l(e){a.default.dispatch({type:\"PUBLIC_UPSELL_NOTICE_DISMISS\",guildId:e})}"
-        },
-        {
-            "name": "hideMaxMemberCountChannelNotice",
-            "code": "function i(e){a.default.dispatch({type:\"MAX_MEMBER_COUNT_NOTICE_DISMISS\",guildId:e})}"
-        },
-        {
-            "name": "hidePremiumGuildGracePeriodNotice",
-            "code": "function s(e){a.default.dispatch({type:\"BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS\",guildId:e})}"
-        }
-    ],
-    [
-        {
             "name": "handoffRemote",
             "code": "function o(e,t){var n;let l=null!==(n=e.sessionId)&&void 0!==n?n:\"\";(0,s.remoteDisconnect)(l),(0,s.disconnectRemote)();let o=null!=t?t:e.channelId;u()(null!=o,\"attempted to transfer to unknown channel\"),e.selfMute!==r.default.isSelfMute()&&a.default.toggleSelfMute(),e.selfDeaf!==r.default.isSelfDeaf()&&a.default.toggleSelfDeaf(),(0,d.default)(o,\"discord_client\",l),i.default.selectVoiceChannel(o,!1)}"
         }
@@ -13605,44 +12539,6 @@
     ],
     [
         {
-            "name": "claimDropsRewardCode",
-            "code": "async(e,t)=>{try{let n=await s.HTTP.post({url:i.Endpoints.DROPS_CLAIM_REWARD_CODE,query:{drops_quest_id:e,platform:t}});return a.default.dispatch({type:\"DROPS_REWARD_CODE_CLAIM_SUCCESS\",rewardCode:n.body.code}),n.body.code}catch(e){throw e}}"
-        },
-        {
-            "name": "enrollDropsUser",
-            "code": "async e=>{await s.HTTP.post({url:i.Endpoints.DROPS_ENROLL_USER,query:{drops_quest_id:e}}),a.default.dispatch({type:\"DROPS_ENROLL_SUCCESS\"})}"
-        },
-        {
-            "name": "fetchCodePlatformAvailability",
-            "code": "async e=>{let t=[];try{t=(await s.HTTP.get({url:i.Endpoints.DROPS_PLATFORM_AVAILABILITY,query:{drops_quest_id:e}})).body.available_platforms}catch(e){t=[]}a.default.dispatch({type:\"DROPS_PLATFORM_AVAILABILITY_SUCCESS\",availablePlatforms:t})}"
-        },
-        {
-            "name": "fetchDropsEligibility",
-            "code": "async e=>{let t=!1;try{t=(await s.HTTP.get({url:i.Endpoints.DROPS_ELIGIBILITY,query:{drops_quest_id:e}})).body.eligible}catch(e){t=!1}a.default.dispatch({type:\"DROPS_ELIGIBILITY_FETCH_SUCCESS\",isEligible:t,dropsQuestId:e})}"
-        },
-        {
-            "name": "fetchDropsUserStatus",
-            "code": "async()=>{try{let e=await s.HTTP.get({url:i.Endpoints.DROPS_USER_STATUS});a.default.dispatch({type:\"DROPS_USER_STATUS_FETCH_SUCCESS\",codes:e.body})}catch(e){a.default.dispatch({type:\"DROPS_USER_STATUS_FETCH_FAILURE\"})}}"
-        },
-        {
-            "name": "fetchEnrolledUser",
-            "code": "async e=>{let t=await s.HTTP.get({url:i.Endpoints.DROPS_ENROLL_USER,query:{drops_quest_id:e}});await a.default.dispatch({type:\"DROPS_ENROLLED_USER_FETCH_SUCCESS\",enrolledUser:t.body.user,isEnrolled:t.body.enrolled,dropsQuestId:e})}"
-        },
-        {
-            "name": "fetchProgress",
-            "code": "async e=>{try{let t=await s.HTTP.get({url:i.Endpoints.DROPS_PROGRESS(e)});a.default.dispatch({type:\"DROPS_FETCH_PROGRESS_SUCCESS\",dropsQuestId:e,completed:t.body.completed,progress:t.body.progress})}catch(t){a.default.dispatch({type:\"DROPS_FETCH_PROGRESS_FAILURE\",dropsQuestId:e})}}"
-        },
-        {
-            "name": "sendHeartbeat",
-            "code": "async(e,t,n)=>{let r=l.default.getViewerIds(t);try{let l=await s.HTTP.post({url:i.Endpoints.DROPS_HEARTBEAT(e),query:{stream_key:t,application_id:n,viewer_count:r.length},retries:2});a.default.dispatch({type:\"DROPS_HEARTBEAT_SUCCESS\",dropsQuestId:e,completed:l.body.completed,progress:l.body.progress})}catch(t){a.default.dispatch({type:\"DROPS_HEARTBEAT_FAILURE\",dropsQuestId:e,statusCode:null==t?void 0:t.status})}}"
-        },
-        {
-            "name": "unenrollDropsUser",
-            "code": "async e=>{await s.HTTP.del({url:i.Endpoints.DROPS_ENROLL_USER,query:{drops_quest_id:e}}),a.default.dispatch({type:\"DROPS_UNENROLL_USER\",dropsQuestId:e}),await d()}"
-        }
-    ],
-    [
-        {
             "name": "rgb2yuv",
             "code": "function n(e){var t=e[0]/255,r=e[1]/255,a=e[2]/255;return[.299*t+.587*r+.114*a,-.14713*t+-.28886*r+.436*a,.615*t+-.51499*r+-.10001*a]}"
         },
@@ -13721,12 +12617,6 @@
     ],
     [
         {
-            "name": "fetchDiscoverableGuilds",
-            "code": "async function r(e){n.default.dispatch({type:\"DISCOVER_GUILDS_FETCH_START\",guildIds:e});try{let{guilds:t}=(await l.HTTP.get({url:i.Endpoints.GUILD_DISCOVERY,query:a.stringify({guild_ids:e}),oldFormErrors:!0})).body;n.default.dispatch({type:\"DISCOVER_GUILDS_FETCH_SUCCESS\",guilds:t})}catch(e){n.default.dispatch({type:\"DISCOVER_GUILDS_FETCH_FAILURE\"})}}"
-        }
-    ],
-    [
-        {
             "name": "default",
             "code": "e=>{let{entry:i,transitionState:n,requestId:r}=e;return(0,t.jsxs)(d.ModalRoot,{size:d.ModalSize.DYNAMIC,transitionState:n,children:[(0,t.jsx)(d.ModalHeader,{children:(0,t.jsx)(d.Heading,{variant:\"heading-md/semibold\",children:\"Debugging entry: \".concat(i.id)})}),(0,t.jsx)(d.ModalContent,{children:(0,t.jsx)(\"div\",{style:{userSelect:\"text\",padding:\"16px\"},children:(0,t.jsx)(d.Text,{variant:\"text-sm/normal\",children:(0,t.jsx)(\"pre\",{children:JSON.stringify({entry:i,requestId:r},null,2)})})})})]})}"
         }
@@ -13765,12 +12655,6 @@
         {
             "name": "canReportMessage",
             "code": "function r(e){return null!=e&&function(e){if(null==e)return!1;let t=e.id,s=i.default.getCurrentUser();return null!=s&&s.id!==t&&!0!==e.system&&!0}(e.author)}"
-        }
-    ],
-    [
-        {
-            "name": "fetchCheckoutRecovery",
-            "code": "async function u(){try{let{body:e}=await l.HTTP.get({url:o.Endpoints.CHECKOUT_RECOVERY}),t=(null==e?void 0:e.is_eligible)===!0,n=!1;t&&(n=(0,r.isUserInCheckoutRecoveryNagbarExperiment)()),t&&n&&!i.default.hasFetchedPaymentSources&&await (0,s.fetchPaymentSources)();let u=t&&n;a.default.dispatch({type:\"CHECKOUT_RECOVERY_STATUS_FETCH\",isEligibleForNagbar:u})}catch(e){a.default.dispatch({type:\"CHECKOUT_RECOVERY_STATUS_FETCH\",isEligibleForNagbar:!1})}}"
         }
     ],
     [
@@ -13945,20 +12829,12 @@
     ],
     [
         {
-            "name": "dismissEducationUpsell",
-            "code": "function G(e){null!=e&&a.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED\",upsellType:e})}"
-        },
-        {
             "name": "goToNextOnboardingStep",
             "code": "function L(e,t){let{homeSettingsEnabled:n}=(0,u.getOnboardingHomeAdminExperiment)(e),a=T.ONBOARDING_STEPS.findIndex(e=>e===t);if(-1!==a&&a!==T.ONBOARDING_STEPS.length-1){if(!n&&T.ONBOARDING_STEPS[a+1]===T.GuildSettingsOnboardingPage.HOME_SETTINGS){g(T.ONBOARDING_STEPS[a+2]);return}g(T.ONBOARDING_STEPS[a+1])}}"
         },
         {
             "name": "goToPrevOnboardingStep",
             "code": "function R(e,t){let{homeSettingsEnabled:n}=(0,u.getOnboardingHomeAdminExperiment)(e),a=T.ONBOARDING_STEPS.findIndex(e=>e===t);if(-1!==a&&0!==a){if(!n&&T.ONBOARDING_STEPS[a-1]===T.GuildSettingsOnboardingPage.HOME_SETTINGS){g(T.ONBOARDING_STEPS[a-2]);return}g(T.ONBOARDING_STEPS[a-1])}}"
-        },
-        {
-            "name": "setOnboardingStep",
-            "code": "function g(e){a.default.dispatch({type:\"GUILD_SETTINGS_ONBOARDING_STEP\",step:e})}"
         },
         {
             "name": "startPreview",
@@ -14095,24 +12971,6 @@
         {
             "name": "useUrlParts",
             "code": "function n(t){let{protocol:e,hostname:a}=o.useMemo(()=>({protocol:(0,s.getProtocol)(t),hostname:(0,s.getHostname)(t)}),[t]),n=\"\".concat(e,\"//\").concat(a);return{protocol:e,hostname:a,theRestOfTheUrl:t.replace(n,\"\")}}"
-        }
-    ],
-    [
-        {
-            "name": "inviteChannel",
-            "code": "function i(e){l.default.dispatch({type:\"ACTIVITY_INVITE_MODAL_SEND\",channelId:e})}"
-        },
-        {
-            "name": "inviteUser",
-            "code": "function r(e){l.default.dispatch({type:\"ACTIVITY_INVITE_MODAL_SEND\",userId:e})}"
-        },
-        {
-            "name": "openModal",
-            "code": "function a(e,t){return new Promise(n=>{setTimeout(()=>{l.default.dispatch({type:\"ACTIVITY_INVITE_MODAL_OPEN\",activity:e,isPrivate:t,resolve:n})},0)})}"
-        },
-        {
-            "name": "updateQuery",
-            "code": "function s(e){l.default.dispatch({type:\"ACTIVITY_INVITE_MODAL_QUERY\",query:e})}"
         }
     ],
     [
