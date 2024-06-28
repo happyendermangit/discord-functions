@@ -8,7 +8,7 @@ Discord pushed an update to their client which renamed about every exports name,
 
 - I'm looking for contributors, if you want to help, here is the info:
 
-1. there are 2644 functions left from the old build
+1. there are 2395 functions left from the old build
 2. please avoid making the find_with use Endpoints.something because Endpoints isnt a valid export on the new build
 3. [here you can find the old functions](https://github.com/happyendermangit/discord-functions/blob/main/need_to_do_functions.json)
 Example function:
